@@ -1,0 +1,47 @@
+PODS:
+  - DisplaySwitcher (1.0.1)
+  - GuillotineMenu (4.0)
+  - IQKeyboardManagerSwift (6.4.0)
+  - JAnalytics (2.0.0):
+    - JCore (< 3.0.0, >= 1.2.0)
+  - JCore (2.1.1)
+  - JPush (3.2.1):
+    - JCore (< 3.0.0, >= 2.0.0)
+  - NVActivityIndicatorView (4.7.0):
+    - NVActivityIndicatorView/Presenter (= 4.7.0)
+  - NVActivityIndicatorView/Presenter (4.7.0)
+  - SnapKit (5.0.0)
+
+DEPENDENCIES:
+  - DisplaySwitcher
+  - GuillotineMenu
+  - IQKeyboardManagerSwift
+  - JAnalytics
+  - JPush
+  - NVActivityIndicatorView
+  - SnapKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - DisplaySwitcher
+    - GuillotineMenu
+    - IQKeyboardManagerSwift
+    - JAnalytics
+    - JCore
+    - JPush
+    - NVActivityIndicatorView
+    - SnapKit
+
+SPEC CHECKSUMS:
+  DisplaySwitcher: 5f725284c28cdf22ea7ba2eee8e8f7e7cb9cdf87
+  GuillotineMenu: 1345cc8c76e09c46b4096f37cf0cacfaee19e211
+  IQKeyboardManagerSwift: ed9b04ee0e3067ffba543283462d619f944b05e5
+  JAnalytics: ec34148f72109c75acefc0606f6bc6f20040dffc
+  JCore: 4072327557f0b83cc22dd4041f2f839740c0077b
+  JPush: a1ff8b8ec53fa3419b414946e4db4efa313baeae
+  NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+
+PODFILE CHECKSUM: 46b19f005ad870b3a1658e7ee4c82e65ea3bdceb
+
+COCOAPODS: 1.5.3
