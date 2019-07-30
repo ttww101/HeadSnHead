@@ -33,6 +33,14 @@
 		9408797F22E9E30900B39B91 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9408797A22E9E30700B39B91 /* 4.jpg */; };
 		9408798022E9E30900B39B91 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9408797B22E9E30800B39B91 /* 3.jpg */; };
 		9408798122E9E30900B39B91 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9408797C22E9E30800B39B91 /* 2.jpg */; };
+		9469B15422EED96500A0756D /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9469B15222EED96500A0756D /* ProductDetailViewController.swift */; };
+		9469B15C22EEEDD600A0756D /* ProductDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9469B15A22EEEDD600A0756D /* ProductDetailTableViewCell.swift */; };
+		9469B15D22EEEDD600A0756D /* ProductDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9469B15B22EEEDD600A0756D /* ProductDetailTableViewCell.xib */; };
+		9469B15F22EF04C300A0756D /* ProductEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9469B15E22EF04C300A0756D /* ProductEditViewController.swift */; };
+		9469B16122EF1C1E00A0756D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9469B16022EF1C1E00A0756D /* BaseViewController.swift */; };
+		9469B16422F032CE00A0756D /* ProductEditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9469B16222F032CE00A0756D /* ProductEditTableViewCell.swift */; };
+		9469B16522F032CE00A0756D /* ProductEditTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9469B16322F032CE00A0756D /* ProductEditTableViewCell.xib */; };
+		9469B16722F03FD700A0756D /* ShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9469B16622F03FD700A0756D /* ShadowImageView.swift */; };
 		F68E321CDA5FE4174F4E6542 /* Pods_ShopSide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E444F2E5143F0363D1DFAAB8 /* Pods_ShopSide.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +76,14 @@
 		9408797A22E9E30700B39B91 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
 		9408797B22E9E30800B39B91 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		9408797C22E9E30800B39B91 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		9469B15222EED96500A0756D /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		9469B15A22EEEDD600A0756D /* ProductDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailTableViewCell.swift; sourceTree = "<group>"; };
+		9469B15B22EEEDD600A0756D /* ProductDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailTableViewCell.xib; sourceTree = "<group>"; };
+		9469B15E22EF04C300A0756D /* ProductEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEditViewController.swift; sourceTree = "<group>"; };
+		9469B16022EF1C1E00A0756D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9469B16222F032CE00A0756D /* ProductEditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEditTableViewCell.swift; sourceTree = "<group>"; };
+		9469B16322F032CE00A0756D /* ProductEditTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductEditTableViewCell.xib; sourceTree = "<group>"; };
+		9469B16622F03FD700A0756D /* ShadowImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowImageView.swift; sourceTree = "<group>"; };
 		E444F2E5143F0363D1DFAAB8 /* Pods_ShopSide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShopSide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -152,6 +168,7 @@
 		9408795722E8985600B39B91 /* bs */ = {
 			isa = PBXGroup;
 			children = (
+				9469B16022EF1C1E00A0756D /* BaseViewController.swift */,
 				9408795822E8986700B39B91 /* BaseDropMenuViewController.swift */,
 			);
 			path = bs;
@@ -169,23 +186,15 @@
 		9408796422E9B17800B39B91 /* cell */ = {
 			isa = PBXGroup;
 			children = (
-				9408796522E9B1C700B39B91 /* ProductCollectionViewCell */,
+				9469B15622EEED9500A0756D /* Product */,
 			);
 			path = cell;
-			sourceTree = "<group>";
-		};
-		9408796522E9B1C700B39B91 /* ProductCollectionViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				9408796622E9B1C700B39B91 /* ProductCollectionViewCell.xib */,
-				9408796722E9B1C700B39B91 /* ProductCollectionViewCell.swift */,
-			);
-			path = ProductCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		9408796C22E9B21700B39B91 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				9469B16622F03FD700A0756D /* ShadowImageView.swift */,
 				9408797322E9B2ED00B39B91 /* StringUtitlities.swift */,
 				9408796A22E9B21500B39B91 /* CellInterface.swift */,
 				9408796F22E9B27A00B39B91 /* UIColor+.swift */,
@@ -211,9 +220,24 @@
 			isa = PBXGroup;
 			children = (
 				9408795A22E9895500B39B91 /* ProductViewController.swift */,
+				9469B15222EED96500A0756D /* ProductDetailViewController.swift */,
+				9469B15E22EF04C300A0756D /* ProductEditViewController.swift */,
 				9408797522E9C99F00B39B91 /* Product.storyboard */,
 			);
 			path = product;
+			sourceTree = "<group>";
+		};
+		9469B15622EEED9500A0756D /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				9408796722E9B1C700B39B91 /* ProductCollectionViewCell.swift */,
+				9408796622E9B1C700B39B91 /* ProductCollectionViewCell.xib */,
+				9469B15A22EEEDD600A0756D /* ProductDetailTableViewCell.swift */,
+				9469B15B22EEEDD600A0756D /* ProductDetailTableViewCell.xib */,
+				9469B16222F032CE00A0756D /* ProductEditTableViewCell.swift */,
+				9469B16322F032CE00A0756D /* ProductEditTableViewCell.xib */,
+			);
+			path = Product;
 			sourceTree = "<group>";
 		};
 		E4FC4E791439025857E970F3 /* Pods */ = {
@@ -287,12 +311,14 @@
 			files = (
 				9408794822E887DD00B39B91 /* LaunchScreen.storyboard in Resources */,
 				9408797F22E9E30900B39B91 /* 4.jpg in Resources */,
+				9469B15D22EEEDD600A0756D /* ProductDetailTableViewCell.xib in Resources */,
 				9408797E22E9E30900B39B91 /* 5.jpg in Resources */,
 				9408797D22E9E30900B39B91 /* 1.jpg in Resources */,
 				9408796822E9B1C700B39B91 /* ProductCollectionViewCell.xib in Resources */,
 				9408794522E887DD00B39B91 /* Assets.xcassets in Resources */,
 				9408795D22E9897200B39B91 /* Menu.storyboard in Resources */,
 				9408797622E9C99F00B39B91 /* Product.storyboard in Resources */,
+				9469B16522F032CE00A0756D /* ProductEditTableViewCell.xib in Resources */,
 				9408794322E887DC00B39B91 /* Main.storyboard in Resources */,
 				9408798022E9E30900B39B91 /* 3.jpg in Resources */,
 				9408798122E9E30900B39B91 /* 2.jpg in Resources */,
@@ -314,8 +340,14 @@
 				"${BUILT_PRODUCTS_DIR}/DisplaySwitcher/DisplaySwitcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GuillotineMenu/GuillotineMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/LGButton/LGButton.framework",
+				"${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/PryntTrimmerView/PryntTrimmerView.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SteviaLayout/Stevia.framework",
+				"${BUILT_PRODUCTS_DIR}/YPImagePicker/YPImagePicker.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -324,8 +356,14 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DisplaySwitcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GuillotineMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTMorphingLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PryntTrimmerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stevia.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YPImagePicker.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -365,15 +403,21 @@
 				9408797422E9B2ED00B39B91 /* StringUtitlities.swift in Sources */,
 				9408795022E88F1000B39B91 /* GuillotineMenuTransitionAnimation.swift in Sources */,
 				9408796322E9B0C100B39B91 /* Product.swift in Sources */,
+				9469B16122EF1C1E00A0756D /* BaseViewController.swift in Sources */,
 				9408795922E8986700B39B91 /* BaseDropMenuViewController.swift in Sources */,
 				9408795B22E9895500B39B91 /* ProductViewController.swift in Sources */,
+				9469B16422F032CE00A0756D /* ProductEditTableViewCell.swift in Sources */,
 				9408794022E887DC00B39B91 /* LandingViewController.swift in Sources */,
 				9408796B22E9B21500B39B91 /* CellInterface.swift in Sources */,
+				9469B15C22EEEDD600A0756D /* ProductDetailTableViewCell.swift in Sources */,
 				9408797022E9B27B00B39B91 /* RequestToken.swift in Sources */,
 				9408796022E99D4000B39B91 /* Config.swift in Sources */,
 				9408797122E9B27B00B39B91 /* DataLoader.swift in Sources */,
 				9408793E22E887DC00B39B91 /* AppDelegate.swift in Sources */,
+				9469B16722F03FD700A0756D /* ShadowImageView.swift in Sources */,
 				9408795222E8904D00B39B91 /* MenuViewController.swift in Sources */,
+				9469B15F22EF04C300A0756D /* ProductEditViewController.swift in Sources */,
+				9469B15422EED96500A0756D /* ProductDetailViewController.swift in Sources */,
 				9408796922E9B1C700B39B91 /* ProductCollectionViewCell.swift in Sources */,
 				9408797222E9B27B00B39B91 /* UIColor+.swift in Sources */,
 			);

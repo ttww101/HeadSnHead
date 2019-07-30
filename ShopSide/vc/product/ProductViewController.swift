@@ -12,8 +12,8 @@ import SnapKit
 
 private let animationDuration: TimeInterval = 0.3
 
-private let listLayoutStaticCellHeight: CGFloat = 120
-private let gridLayoutStaticCellHeight: CGFloat = 200
+private let listLayoutStaticCellHeight: CGFloat = 100
+private let gridLayoutStaticCellHeight: CGFloat = 220
 
 class ProductViewController: BaseDropMenuViewController {
 
@@ -23,8 +23,8 @@ class ProductViewController: BaseDropMenuViewController {
     
     fileprivate var tap: UITapGestureRecognizer!
     
-    fileprivate var users = Config.Test.products
-    fileprivate var searchUsers = [Product]()
+    fileprivate var products = Config.Test.products
+    fileprivate var searchProducts = Config.Test.products
     
     fileprivate var isTransitionAvailable = true
     fileprivate lazy var listLayout = DisplaySwitchLayout(staticCellHeight: listLayoutStaticCellHeight, nextLayoutStaticCellHeight: gridLayoutStaticCellHeight, layoutState: .list)
@@ -37,7 +37,7 @@ class ProductViewController: BaseDropMenuViewController {
         
         tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         
-        searchUsers = users
+        searchProducts = products
         rotationButton.isSelected = true
         setupCollectionView()
     }
@@ -66,17 +66,22 @@ class ProductViewController: BaseDropMenuViewController {
         rotationButton.animationDuration = animationDuration
     }
     
-    @IBAction func tapRecognized() {
-        view.endEditing(true)
+    
+    @IBAction func addButtonDidTouchUpInside(_ sender: Any) {
+        self.view.endEditing(true)
+        guard let vc = self.createViewControllerFromStoryboard(name: Config.Storyboard.product, identifier: Config.Controller.productEdit) as? ProductEditViewController else { return }
+        vc.type = .add
+        vc.product = Product(name: "", surname: "", avatar: nil, availableCount: 0, color: "", description: "")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }
 
+// MARK: - UICollectionViewDataSource, UICollectionViewDelegate
 extension ProductViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
-    // MARK: - UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return searchUsers.count
+        return searchProducts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -86,15 +91,20 @@ extension ProductViewController: UICollectionViewDataSource, UICollectionViewDel
         } else {
             cell.setupListLayoutConstraints(1, cellWidth: cell.frame.width)
         }
-        cell.bind(searchUsers[(indexPath as NSIndexPath).row])
+        cell.bind(searchProducts[(indexPath as NSIndexPath).row])
         
         return cell
     }
     
-    // MARK: - UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, transitionLayoutForOldLayout fromLayout: UICollectionViewLayout, newLayout toLayout: UICollectionViewLayout) -> UICollectionViewTransitionLayout {
         let customTransitionLayout = TransitionLayout(currentLayout: fromLayout, nextLayout: toLayout)
         return customTransitionLayout
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let vc = self.createViewControllerFromStoryboard(name: Config.Storyboard.product, identifier: Config.Controller.productDetail)as? ProductDetailViewController else { return }
+        vc.product = searchProducts[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
@@ -111,13 +121,14 @@ extension ProductViewController: UICollectionViewDataSource, UICollectionViewDel
     
 }
 
-extension ProductViewController {
+//MARK: UISearchBarDelegate
+extension ProductViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {
-            searchUsers = users
+            searchProducts = products
         } else {
-            searchUsers = searchUsers.filter { return $0.name.contains(searchText) }
+            searchProducts = searchProducts.filter { return $0.name.contains(searchText) }
         }
         
         collectionView.reloadData()
@@ -138,6 +149,5 @@ extension ProductViewController {
     @objc func handleTap() {
         view.endEditing(true)
     }
-    
 }
 

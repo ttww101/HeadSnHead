@@ -13,5 +13,9 @@ target 'ShopSide' do
   pod 'SnapKit'
   pod 'GuillotineMenu'
   pod 'DisplaySwitcher'
-
+  pod 'SkyFloatingLabelTextField'
+  pod 'LTMorphingLabel'
+  pod 'YPImagePicker'
+  pod 'LGButton'
+  
 end

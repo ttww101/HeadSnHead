@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseDropMenuViewController: UIViewController {
+class BaseDropMenuViewController: BaseViewController {
 
     fileprivate lazy var presentationAnimator = GuillotineTransitionAnimation()
     

@@ -12,12 +12,12 @@ class Product {
     
     var name: String
     var surname: String
-    var avatar: UIImage
+    var avatar: UIImage?
     var availableCount: Int
     var color: String
     var description: String
     
-    init(name: String, surname: String, avatar: UIImage, availableCount: Int, color: String, description: String = "") {
+    init(name: String, surname: String, avatar: UIImage?, availableCount: Int, color: String, description: String = "") {
         self.name = name
         self.surname = surname
         self.avatar = avatar

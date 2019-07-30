@@ -7,10 +7,18 @@ PODS:
   - JCore (2.1.1)
   - JPush (3.2.1):
     - JCore (< 3.0.0, >= 2.0.0)
+  - LGButton (1.1.6)
+  - LTMorphingLabel (0.7.0)
   - NVActivityIndicatorView (4.7.0):
     - NVActivityIndicatorView/Presenter (= 4.7.0)
   - NVActivityIndicatorView/Presenter (4.7.0)
+  - PryntTrimmerView (3.0.0)
+  - SkyFloatingLabelTextField (3.7.0)
   - SnapKit (5.0.0)
+  - SteviaLayout (4.4.4)
+  - YPImagePicker (4.0.0):
+    - PryntTrimmerView (~> 3.0.0)
+    - SteviaLayout (~> 4.4.1)
 
 DEPENDENCIES:
   - DisplaySwitcher
@@ -18,8 +26,12 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - JAnalytics
   - JPush
+  - LGButton
+  - LTMorphingLabel
   - NVActivityIndicatorView
+  - SkyFloatingLabelTextField
   - SnapKit
+  - YPImagePicker
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -29,8 +41,14 @@ SPEC REPOS:
     - JAnalytics
     - JCore
     - JPush
+    - LGButton
+    - LTMorphingLabel
     - NVActivityIndicatorView
+    - PryntTrimmerView
+    - SkyFloatingLabelTextField
     - SnapKit
+    - SteviaLayout
+    - YPImagePicker
 
 SPEC CHECKSUMS:
   DisplaySwitcher: 5f725284c28cdf22ea7ba2eee8e8f7e7cb9cdf87
@@ -39,9 +57,15 @@ SPEC CHECKSUMS:
   JAnalytics: ec34148f72109c75acefc0606f6bc6f20040dffc
   JCore: 4072327557f0b83cc22dd4041f2f839740c0077b
   JPush: a1ff8b8ec53fa3419b414946e4db4efa313baeae
+  LGButton: 9f0a7f9d3030e3f504108342f6b66d64a429371b
+  LTMorphingLabel: 22147fb1ec2b0306537ccc348b36ea8617179b03
   NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
+  PryntTrimmerView: 53ac64053c7ce63cb3e27f54090f52da0734891d
+  SkyFloatingLabelTextField: 4b46db0ab1ccde0919cded29c656e6b4805eda04
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+  SteviaLayout: 523469269059f2c6da02820bb2ff28a5fe0780aa
+  YPImagePicker: 8039f89ad79281545fa868486f32d9bf5d65ede1
 
-PODFILE CHECKSUM: 46b19f005ad870b3a1658e7ee4c82e65ea3bdceb
+PODFILE CHECKSUM: dbf75a1ee484bb5094b2345c6c2c5a77185a1734
 
 COCOAPODS: 1.5.3
