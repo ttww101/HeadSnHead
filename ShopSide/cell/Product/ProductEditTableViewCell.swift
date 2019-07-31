@@ -10,6 +10,9 @@ import UIKit
 
 class ProductEditTableViewCell: UITableViewCell {
 
+    var didTapAvatarImageClosure: (()->())?
+    var didTapOkButtonClosure: (()->())?
+    
     @IBOutlet weak var nameTextView: UITextView!
     @IBOutlet weak var avatarImageView: ShadowImageView! {
         didSet {
@@ -37,13 +40,26 @@ class ProductEditTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        let tapGes = UITapGestureRecognizer(target: self, action: #selector(didTappedAvatarImage))
+        self.avatarImageView.addGestureRecognizer(tapGes)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    @objc func didTappedAvatarImage() {
+        if let closure = self.didTapAvatarImageClosure {
+            closure()
+        }
+    }
+    
+    @IBAction func okButtonDidTouchUpInside() {
+        if let closure = self.didTapOkButtonClosure {
+            closure()
+        }
     }
     
 }

@@ -17,5 +17,6 @@ target 'ShopSide' do
   pod 'LTMorphingLabel'
   pod 'YPImagePicker'
   pod 'LGButton'
+  pod 'GMStepper'
   
 end

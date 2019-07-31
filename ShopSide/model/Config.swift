@@ -10,6 +10,8 @@ import UIKit
 
 struct Config {
     
+    static let AppAssociateName = "Shop Side"
+    
     struct Menu {
         static let names = ["Product", "Activity", "Setting"]
     }

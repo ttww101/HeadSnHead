@@ -1,5 +1,6 @@
 PODS:
   - DisplaySwitcher (1.0.1)
+  - GMStepper (2.2)
   - GuillotineMenu (4.0)
   - IQKeyboardManagerSwift (6.4.0)
   - JAnalytics (2.0.0):
@@ -22,6 +23,7 @@ PODS:
 
 DEPENDENCIES:
   - DisplaySwitcher
+  - GMStepper
   - GuillotineMenu
   - IQKeyboardManagerSwift
   - JAnalytics
@@ -36,6 +38,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - DisplaySwitcher
+    - GMStepper
     - GuillotineMenu
     - IQKeyboardManagerSwift
     - JAnalytics
@@ -52,6 +55,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   DisplaySwitcher: 5f725284c28cdf22ea7ba2eee8e8f7e7cb9cdf87
+  GMStepper: 89fb106944dfcc3aa3add7164e3ebd463ea2104b
   GuillotineMenu: 1345cc8c76e09c46b4096f37cf0cacfaee19e211
   IQKeyboardManagerSwift: ed9b04ee0e3067ffba543283462d619f944b05e5
   JAnalytics: ec34148f72109c75acefc0606f6bc6f20040dffc
@@ -66,6 +70,6 @@ SPEC CHECKSUMS:
   SteviaLayout: 523469269059f2c6da02820bb2ff28a5fe0780aa
   YPImagePicker: 8039f89ad79281545fa868486f32d9bf5d65ede1
 
-PODFILE CHECKSUM: dbf75a1ee484bb5094b2345c6c2c5a77185a1734
+PODFILE CHECKSUM: 7115f574ef9d070698998db1941b18b95af31e22
 
 COCOAPODS: 1.5.3

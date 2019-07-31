@@ -26,19 +26,19 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b03-GR-XBb">
-                        <rect key="frame" x="30" y="382.5" width="55" height="24"/>
+                        <rect key="frame" x="30" y="402.5" width="55" height="24"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                         <color key="textColor" red="0.1619408312" green="0.1619408312" blue="0.1619408312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urN-Vy-ZjH">
-                        <rect key="frame" x="30" y="426.5" width="48.5" height="52"/>
+                        <rect key="frame" x="30" y="466.5" width="48.5" height="52"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                         <color key="textColor" red="0.1619408312" green="0.1619408312" blue="0.1619408312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eha-75-ELq">
-                        <rect key="frame" x="30" y="498.5" width="103.5" height="24"/>
+                        <rect key="frame" x="30" y="558.5" width="103.5" height="24"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                         <color key="textColor" red="0.1619408312" green="0.1619408312" blue="0.1619408312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -89,8 +89,42 @@
                             <constraint firstAttribute="height" constant="1" id="TcU-W3-HqN"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ZD-ON-bbx" customClass="GMStepper" customModule="GMStepper">
+                        <rect key="frame" x="229" y="394.5" width="160" height="40"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="qCi-Nu-raa"/>
+                            <constraint firstAttribute="width" constant="160" id="vWF-v5-J1H"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                <real key="value" value="999"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="buttonsBackgroundColor">
+                                <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="buttonsTextColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="labelBackgroundColor">
+                                <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="labelTextColor">
+                                <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="stepValue">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="labelCornerRadius">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="onDrag" text="WHITE / RAW WHITE / OFF WHITE" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="Ijv-s8-XHD">
-                        <rect key="frame" x="194.5" y="426.5" width="194.5" height="52"/>
+                        <rect key="frame" x="194.5" y="466.5" width="194.5" height="52"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="w63-Z0-DXP"/>
@@ -102,14 +136,14 @@
                         </connections>
                     </textView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="60j-Qo-neL" userLabel="Seperator View">
-                        <rect key="frame" x="194.5" y="478.5" width="194.5" height="1"/>
+                        <rect key="frame" x="194.5" y="518.5" width="194.5" height="1"/>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="e5R-bF-osa"/>
                         </constraints>
                     </view>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="g73-Jc-RkY">
-                        <rect key="frame" x="25" y="530.5" width="369" height="123.5"/>
+                        <rect key="frame" x="25" y="590.5" width="369" height="123.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <string key="text">This product is offered in men's sizing.
 There is an approximate 1.5-size difference between men's and women's sizing.
@@ -121,7 +155,7 @@ For example, a women’s size 8.5 is roughly equivalent to a men’s size 7.</st
                         </connections>
                     </textView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aaY-Vz-6Q2" userLabel="Seperator View">
-                        <rect key="frame" x="25" y="654" width="369" height="1"/>
+                        <rect key="frame" x="25" y="714" width="369" height="1"/>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="JDV-gl-Ol0"/>
@@ -129,7 +163,7 @@ For example, a women’s size 8.5 is roughly equivalent to a men’s size 7.</st
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJK-bf-IEt" customClass="LGButton" customModule="LGButton">
-                        <rect key="frame" x="25" y="673" width="369" height="61.5"/>
+                        <rect key="frame" x="25" y="733" width="369" height="61.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="eJK-bf-IEt" secondAttribute="height" multiplier="6:1" id="bpb-Vf-HFM"/>
@@ -160,13 +194,16 @@ For example, a women’s size 8.5 is roughly equivalent to a men’s size 7.</st
                                 <real key="value" value="90"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="okButtonDidTouchUpInside" destination="KGk-i7-Jjw" eventType="touchUpInside" id="VYy-Tl-goe"/>
+                        </connections>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="g73-Jc-RkY" firstAttribute="top" secondItem="eha-75-ELq" secondAttribute="bottom" constant="8" id="2Yd-Jb-4w7"/>
                     <constraint firstItem="Ijv-s8-XHD" firstAttribute="trailing" secondItem="v18-5Y-1wu" secondAttribute="trailing" id="3c5-FC-tM0"/>
-                    <constraint firstItem="urN-Vy-ZjH" firstAttribute="top" secondItem="b03-GR-XBb" secondAttribute="bottom" constant="20" id="5LI-Rr-0JE"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eJK-bf-IEt" secondAttribute="bottom" constant="30" id="7v2-ae-1hu"/>
+                    <constraint firstItem="urN-Vy-ZjH" firstAttribute="top" secondItem="b03-GR-XBb" secondAttribute="bottom" constant="40" id="5LI-Rr-0JE"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eJK-bf-IEt" secondAttribute="bottom" constant="25" id="7v2-ae-1hu"/>
                     <constraint firstItem="n8b-XE-PG0" firstAttribute="bottom" secondItem="v18-5Y-1wu" secondAttribute="bottom" id="7zr-kj-Kgo"/>
                     <constraint firstItem="b03-GR-XBb" firstAttribute="leading" secondItem="n8b-XE-PG0" secondAttribute="leading" id="9lk-X4-JpL"/>
                     <constraint firstItem="eJK-bf-IEt" firstAttribute="leading" secondItem="g73-Jc-RkY" secondAttribute="leading" id="EYp-jv-X6R"/>
@@ -180,6 +217,7 @@ For example, a women’s size 8.5 is roughly equivalent to a men’s size 7.</st
                     <constraint firstItem="60j-Qo-neL" firstAttribute="top" secondItem="Ijv-s8-XHD" secondAttribute="bottom" id="Sf0-0S-dMI"/>
                     <constraint firstItem="g73-Jc-RkY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="TwI-E1-6it"/>
                     <constraint firstItem="60j-Qo-neL" firstAttribute="leading" secondItem="Ijv-s8-XHD" secondAttribute="leading" id="W5G-mB-P3I"/>
+                    <constraint firstItem="8ZD-ON-bbx" firstAttribute="centerY" secondItem="b03-GR-XBb" secondAttribute="centerY" id="WAW-Na-I5O"/>
                     <constraint firstItem="aaY-Vz-6Q2" firstAttribute="top" secondItem="g73-Jc-RkY" secondAttribute="bottom" id="WCb-no-NNa"/>
                     <constraint firstAttribute="trailing" secondItem="g73-Jc-RkY" secondAttribute="trailing" constant="25" id="WIO-HC-gbM"/>
                     <constraint firstItem="Ijv-s8-XHD" firstAttribute="top" secondItem="urN-Vy-ZjH" secondAttribute="top" id="Wex-r7-n5Y"/>
@@ -192,11 +230,12 @@ For example, a women’s size 8.5 is roughly equivalent to a men’s size 7.</st
                     <constraint firstItem="n8b-XE-PG0" firstAttribute="top" secondItem="RdM-SO-hlm" secondAttribute="bottom" constant="20" id="o5i-Kr-cPY"/>
                     <constraint firstItem="Q12-KO-FBf" firstAttribute="top" secondItem="v18-5Y-1wu" secondAttribute="bottom" id="omT-Gg-z8H"/>
                     <constraint firstItem="60j-Qo-neL" firstAttribute="trailing" secondItem="Ijv-s8-XHD" secondAttribute="trailing" id="qXZ-g9-yOo"/>
-                    <constraint firstItem="eha-75-ELq" firstAttribute="top" secondItem="Ijv-s8-XHD" secondAttribute="bottom" constant="20" id="rrC-ff-9QA"/>
+                    <constraint firstItem="eha-75-ELq" firstAttribute="top" secondItem="Ijv-s8-XHD" secondAttribute="bottom" constant="40" id="rrC-ff-9QA"/>
                     <constraint firstItem="Q12-KO-FBf" firstAttribute="leading" secondItem="v18-5Y-1wu" secondAttribute="leading" id="tvN-5D-FS2"/>
                     <constraint firstItem="urN-Vy-ZjH" firstAttribute="leading" secondItem="b03-GR-XBb" secondAttribute="leading" id="u83-aD-Jqo"/>
                     <constraint firstItem="aaY-Vz-6Q2" firstAttribute="trailing" secondItem="g73-Jc-RkY" secondAttribute="trailing" id="ui6-Sd-Ot2"/>
-                    <constraint firstItem="b03-GR-XBb" firstAttribute="top" secondItem="v18-5Y-1wu" secondAttribute="bottom" constant="20" id="xvP-se-ih1"/>
+                    <constraint firstItem="8ZD-ON-bbx" firstAttribute="trailing" secondItem="Q12-KO-FBf" secondAttribute="trailing" id="xdb-wm-Q8Q"/>
+                    <constraint firstItem="b03-GR-XBb" firstAttribute="top" secondItem="v18-5Y-1wu" secondAttribute="bottom" constant="40" id="xvP-se-ih1"/>
                     <constraint firstItem="Q12-KO-FBf" firstAttribute="trailing" secondItem="v18-5Y-1wu" secondAttribute="trailing" id="zkC-Gp-ZUr"/>
                 </constraints>
             </tableViewCellContentView>

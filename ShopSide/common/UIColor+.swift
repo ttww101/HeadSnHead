@@ -65,5 +65,13 @@ extension UIColor {
     static func youngYellow() -> UIColor {
         return UIColor.hexColor(with: "ffff5e")
     }
+    
+    static func cottonBlack() -> UIColor {
+        return UIColor.hexColor(with: "454545")
+    }
+    
+    static func lightRoss() -> UIColor {
+        return UIColor.hexColor(with: "dd7663")
+    }
 }
 
