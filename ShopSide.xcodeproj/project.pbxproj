@@ -12,7 +12,6 @@
 		9408794322E887DC00B39B91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9408794122E887DC00B39B91 /* Main.storyboard */; };
 		9408794522E887DD00B39B91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9408794422E887DD00B39B91 /* Assets.xcassets */; };
 		9408794822E887DD00B39B91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9408794622E887DD00B39B91 /* LaunchScreen.storyboard */; };
-		9408795022E88F1000B39B91 /* GuillotineMenuTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9408794F22E88F1000B39B91 /* GuillotineMenuTransitionAnimation.swift */; };
 		9408795222E8904D00B39B91 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9408795122E8904D00B39B91 /* MenuViewController.swift */; };
 		9408795422E8947700B39B91 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9408795322E8947700B39B91 /* ActivityViewController.swift */; };
 		9408795922E8986700B39B91 /* BaseDropMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9408795822E8986700B39B91 /* BaseDropMenuViewController.swift */; };
@@ -41,6 +40,12 @@
 		9469B16422F032CE00A0756D /* ProductEditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9469B16222F032CE00A0756D /* ProductEditTableViewCell.swift */; };
 		9469B16522F032CE00A0756D /* ProductEditTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9469B16322F032CE00A0756D /* ProductEditTableViewCell.xib */; };
 		9469B16722F03FD700A0756D /* ShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9469B16622F03FD700A0756D /* ShadowImageView.swift */; };
+		94D1F76322F18C80009FC676 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94D1F76222F18C7F009FC676 /* GoogleService-Info.plist */; };
+		94D1F76522F19CCA009FC676 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D1F76422F19CC9009FC676 /* Login.storyboard */; };
+		94D1F76722F19CDB009FC676 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D1F76622F19CDB009FC676 /* LoginViewController.swift */; };
+		94D1F76B22F19D09009FC676 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D1F76A22F19D08009FC676 /* RegisterViewController.swift */; };
+		94D1F76E22F19D74009FC676 /* balalaLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D1F76D22F19D73009FC676 /* balalaLoadingIndicator.swift */; };
+		94DA6FBD22F1CED6000B0A6A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DA6FBC22F1CED6000B0A6A /* User.swift */; };
 		F68E321CDA5FE4174F4E6542 /* Pods_ShopSide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E444F2E5143F0363D1DFAAB8 /* Pods_ShopSide.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +59,6 @@
 		9408794422E887DD00B39B91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9408794722E887DD00B39B91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9408794922E887DD00B39B91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9408794F22E88F1000B39B91 /* GuillotineMenuTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuillotineMenuTransitionAnimation.swift; sourceTree = "<group>"; };
 		9408795122E8904D00B39B91 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		9408795322E8947700B39B91 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		9408795822E8986700B39B91 /* BaseDropMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDropMenuViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +88,12 @@
 		9469B16222F032CE00A0756D /* ProductEditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEditTableViewCell.swift; sourceTree = "<group>"; };
 		9469B16322F032CE00A0756D /* ProductEditTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductEditTableViewCell.xib; sourceTree = "<group>"; };
 		9469B16622F03FD700A0756D /* ShadowImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowImageView.swift; sourceTree = "<group>"; };
+		94D1F76222F18C7F009FC676 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		94D1F76422F19CC9009FC676 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		94D1F76622F19CDB009FC676 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		94D1F76A22F19D08009FC676 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		94D1F76D22F19D73009FC676 /* balalaLoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = balalaLoadingIndicator.swift; sourceTree = "<group>"; };
+		94DA6FBC22F1CED6000B0A6A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E444F2E5143F0363D1DFAAB8 /* Pods_ShopSide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShopSide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -142,6 +152,7 @@
 				9408794622E887DD00B39B91 /* LaunchScreen.storyboard */,
 				9408794922E887DD00B39B91 /* Info.plist */,
 				9408796122E9AF1900B39B91 /* ShopSide-Bridging-Header.h */,
+				94D1F76222F18C7F009FC676 /* GoogleService-Info.plist */,
 			);
 			path = ShopSide;
 			sourceTree = "<group>";
@@ -149,6 +160,7 @@
 		9408795522E8947B00B39B91 /* vc */ = {
 			isa = PBXGroup;
 			children = (
+				94D1F76C22F19D11009FC676 /* login */,
 				9408798222E9E5FB00B39B91 /* product */,
 				9408795322E8947700B39B91 /* ActivityViewController.swift */,
 			);
@@ -158,7 +170,6 @@
 		9408795622E8948600B39B91 /* menu */ = {
 			isa = PBXGroup;
 			children = (
-				9408794F22E88F1000B39B91 /* GuillotineMenuTransitionAnimation.swift */,
 				9408795122E8904D00B39B91 /* MenuViewController.swift */,
 				9408795C22E9897200B39B91 /* Menu.storyboard */,
 			);
@@ -179,6 +190,7 @@
 			children = (
 				9408795F22E99D4000B39B91 /* Config.swift */,
 				9408796222E9B0C100B39B91 /* Product.swift */,
+				94DA6FBC22F1CED6000B0A6A /* User.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -194,6 +206,7 @@
 		9408796C22E9B21700B39B91 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				94D1F76D22F19D73009FC676 /* balalaLoadingIndicator.swift */,
 				9469B16622F03FD700A0756D /* ShadowImageView.swift */,
 				9408797322E9B2ED00B39B91 /* StringUtitlities.swift */,
 				9408796A22E9B21500B39B91 /* CellInterface.swift */,
@@ -238,6 +251,16 @@
 				9469B16322F032CE00A0756D /* ProductEditTableViewCell.xib */,
 			);
 			path = Product;
+			sourceTree = "<group>";
+		};
+		94D1F76C22F19D11009FC676 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				94D1F76622F19CDB009FC676 /* LoginViewController.swift */,
+				94D1F76A22F19D08009FC676 /* RegisterViewController.swift */,
+				94D1F76422F19CC9009FC676 /* Login.storyboard */,
+			);
+			path = login;
 			sourceTree = "<group>";
 		};
 		E4FC4E791439025857E970F3 /* Pods */ = {
@@ -317,11 +340,13 @@
 				9408796822E9B1C700B39B91 /* ProductCollectionViewCell.xib in Resources */,
 				9408794522E887DD00B39B91 /* Assets.xcassets in Resources */,
 				9408795D22E9897200B39B91 /* Menu.storyboard in Resources */,
+				94D1F76522F19CCA009FC676 /* Login.storyboard in Resources */,
 				9408797622E9C99F00B39B91 /* Product.storyboard in Resources */,
 				9469B16522F032CE00A0756D /* ProductEditTableViewCell.xib in Resources */,
 				9408794322E887DC00B39B91 /* Main.storyboard in Resources */,
 				9408798022E9E30900B39B91 /* 3.jpg in Resources */,
 				9408798122E9E30900B39B91 /* 2.jpg in Resources */,
+				94D1F76322F18C80009FC676 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +364,8 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-ShopSide/Pods-ShopSide-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DisplaySwitcher/DisplaySwitcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GMStepper/GMStepper.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/GuillotineMenu/GuillotineMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/LGButton/LGButton.framework",
@@ -349,6 +376,8 @@
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SteviaLayout/Stevia.framework",
 				"${BUILT_PRODUCTS_DIR}/YPImagePicker/YPImagePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -356,6 +385,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DisplaySwitcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GMStepper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GuillotineMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGButton.framework",
@@ -366,6 +397,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stevia.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YPImagePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -403,7 +436,7 @@
 			files = (
 				9408795422E8947700B39B91 /* ActivityViewController.swift in Sources */,
 				9408797422E9B2ED00B39B91 /* StringUtitlities.swift in Sources */,
-				9408795022E88F1000B39B91 /* GuillotineMenuTransitionAnimation.swift in Sources */,
+				94DA6FBD22F1CED6000B0A6A /* User.swift in Sources */,
 				9408796322E9B0C100B39B91 /* Product.swift in Sources */,
 				9469B16122EF1C1E00A0756D /* BaseViewController.swift in Sources */,
 				9408795922E8986700B39B91 /* BaseDropMenuViewController.swift in Sources */,
@@ -411,9 +444,12 @@
 				9469B16422F032CE00A0756D /* ProductEditTableViewCell.swift in Sources */,
 				9408794022E887DC00B39B91 /* LandingViewController.swift in Sources */,
 				9408796B22E9B21500B39B91 /* CellInterface.swift in Sources */,
+				94D1F76722F19CDB009FC676 /* LoginViewController.swift in Sources */,
 				9469B15C22EEEDD600A0756D /* ProductDetailTableViewCell.swift in Sources */,
 				9408797022E9B27B00B39B91 /* RequestToken.swift in Sources */,
 				9408796022E99D4000B39B91 /* Config.swift in Sources */,
+				94D1F76B22F19D09009FC676 /* RegisterViewController.swift in Sources */,
+				94D1F76E22F19D74009FC676 /* balalaLoadingIndicator.swift in Sources */,
 				9408797122E9B27B00B39B91 /* DataLoader.swift in Sources */,
 				9408793E22E887DC00B39B91 /* AppDelegate.swift in Sources */,
 				9469B16722F03FD700A0756D /* ShadowImageView.swift in Sources */,

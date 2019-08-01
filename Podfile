@@ -6,11 +6,23 @@ target 'ShopSide' do
   use_frameworks!
 
   # Pods for ShopSide
-  pod 'IQKeyboardManagerSwift'
-  pod 'NVActivityIndicatorView'
+  
+  #Firebase
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  
+  #JPush, JAnalytics
   pod 'JPush'
   pod 'JAnalytics'
+  
+  #General
+  pod 'IQKeyboardManagerSwift'
+  pod 'NVActivityIndicatorView'
   pod 'SnapKit'
+ 
+  #Custom
   pod 'GuillotineMenu'
   pod 'DisplaySwitcher'
   pod 'SkyFloatingLabelTextField'

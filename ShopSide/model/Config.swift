@@ -19,9 +19,14 @@ struct Config {
     struct Storyboard {
         static let main = "Main"
         static let product = "Product"
+        static let login = "Login"
     }
     
     struct Controller {
+        static let login = "LoginViewController"
+        static let register = "RegisterViewController"
+        
+        static let productNav = "ProductNavigationController"
         static let productTotal = "ProductTotalViewController"
         static let productDetail = "ProductDetailViewController"
         static let productEdit = "ProductEditViewController"
@@ -30,6 +35,24 @@ struct Config {
     struct TableViewCell {
         static let productDetail = "ProductDetailTableViewCell"
         static let productEdit = "ProductEditTableViewCell"
+    }
+    
+    struct Firebase {
+        
+        static let dbUrl = "https://fcustomer-404c0.firebaseio.com/"
+        
+        struct Storage {
+            static let userPhoto = "UserPhoto"
+        }
+        
+        struct User {
+            static let userID = "userID"
+            static let nodeName = "Users"
+            static let email = "Email"
+            static let name = "Name"
+            static let gender = "Gender"
+            static let photoURL = "PhotoURL"
+        }
     }
     
     struct Test {

@@ -71,11 +71,8 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="onDrag" text="ADIDAS CONSORTIUM X PHARRELL WILLIAMS SOLAR HU PRO" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="v18-5Y-1wu">
-                        <rect key="frame" x="177.5" y="292.5" width="211.5" height="70"/>
+                        <rect key="frame" x="151.5" y="292.5" width="237.5" height="70"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="MNA-Mc-3i0"/>
-                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                         <connections>
@@ -83,7 +80,7 @@
                         </connections>
                     </textView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q12-KO-FBf" userLabel="Seperator View">
-                        <rect key="frame" x="177.5" y="362.5" width="211.5" height="1"/>
+                        <rect key="frame" x="151.5" y="362.5" width="237.5" height="1"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="TcU-W3-HqN"/>
@@ -124,11 +121,8 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="onDrag" text="WHITE / RAW WHITE / OFF WHITE" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="Ijv-s8-XHD">
-                        <rect key="frame" x="194.5" y="466.5" width="194.5" height="52"/>
+                        <rect key="frame" x="209.5" y="466.5" width="179.5" height="52"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="w63-Z0-DXP"/>
-                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                         <connections>
@@ -136,7 +130,7 @@
                         </connections>
                     </textView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="60j-Qo-neL" userLabel="Seperator View">
-                        <rect key="frame" x="194.5" y="518.5" width="194.5" height="1"/>
+                        <rect key="frame" x="209.5" y="518.5" width="179.5" height="1"/>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="e5R-bF-osa"/>
@@ -213,7 +207,7 @@ For example, a women’s size 8.5 is roughly equivalent to a men’s size 7.</st
                     <constraint firstAttribute="trailing" secondItem="RdM-SO-hlm" secondAttribute="trailing" constant="20" id="JFv-GG-uw4"/>
                     <constraint firstItem="eJK-bf-IEt" firstAttribute="top" secondItem="g73-Jc-RkY" secondAttribute="bottom" constant="19" id="Mo0-7Y-dkv"/>
                     <constraint firstItem="RdM-SO-hlm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="NA5-8H-EJB"/>
-                    <constraint firstItem="v18-5Y-1wu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eha-75-ELq" secondAttribute="trailing" constant="25" id="RBw-cm-ppT"/>
+                    <constraint firstItem="v18-5Y-1wu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eha-75-ELq" secondAttribute="trailing" constant="16" id="RBw-cm-ppT"/>
                     <constraint firstItem="60j-Qo-neL" firstAttribute="top" secondItem="Ijv-s8-XHD" secondAttribute="bottom" id="Sf0-0S-dMI"/>
                     <constraint firstItem="g73-Jc-RkY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="TwI-E1-6it"/>
                     <constraint firstItem="60j-Qo-neL" firstAttribute="leading" secondItem="Ijv-s8-XHD" secondAttribute="leading" id="W5G-mB-P3I"/>
@@ -223,8 +217,9 @@ For example, a women’s size 8.5 is roughly equivalent to a men’s size 7.</st
                     <constraint firstItem="Ijv-s8-XHD" firstAttribute="top" secondItem="urN-Vy-ZjH" secondAttribute="top" id="Wex-r7-n5Y"/>
                     <constraint firstItem="n8b-XE-PG0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="WpE-nF-v0v"/>
                     <constraint firstItem="urN-Vy-ZjH" firstAttribute="bottom" secondItem="Ijv-s8-XHD" secondAttribute="bottom" id="Y5u-Hc-dIO"/>
+                    <constraint firstItem="Ijv-s8-XHD" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="3:7" id="Yth-T0-2eb"/>
                     <constraint firstAttribute="trailing" secondItem="v18-5Y-1wu" secondAttribute="trailing" constant="30" id="akB-LX-GCv"/>
-                    <constraint firstItem="Ijv-s8-XHD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eha-75-ELq" secondAttribute="trailing" constant="25" id="g5R-wT-34w"/>
+                    <constraint firstItem="Ijv-s8-XHD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eha-75-ELq" secondAttribute="trailing" constant="16" id="g5R-wT-34w"/>
                     <constraint firstItem="RdM-SO-hlm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="hYH-Kf-CMZ"/>
                     <constraint firstItem="aaY-Vz-6Q2" firstAttribute="leading" secondItem="g73-Jc-RkY" secondAttribute="leading" id="i0m-3b-6MT"/>
                     <constraint firstItem="n8b-XE-PG0" firstAttribute="top" secondItem="RdM-SO-hlm" secondAttribute="bottom" constant="20" id="o5i-Kr-cPY"/>
@@ -234,6 +229,7 @@ For example, a women’s size 8.5 is roughly equivalent to a men’s size 7.</st
                     <constraint firstItem="Q12-KO-FBf" firstAttribute="leading" secondItem="v18-5Y-1wu" secondAttribute="leading" id="tvN-5D-FS2"/>
                     <constraint firstItem="urN-Vy-ZjH" firstAttribute="leading" secondItem="b03-GR-XBb" secondAttribute="leading" id="u83-aD-Jqo"/>
                     <constraint firstItem="aaY-Vz-6Q2" firstAttribute="trailing" secondItem="g73-Jc-RkY" secondAttribute="trailing" id="ui6-Sd-Ot2"/>
+                    <constraint firstItem="v18-5Y-1wu" firstAttribute="width" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="3:7" id="wEX-YM-av9"/>
                     <constraint firstItem="8ZD-ON-bbx" firstAttribute="trailing" secondItem="Q12-KO-FBf" secondAttribute="trailing" id="xdb-wm-Q8Q"/>
                     <constraint firstItem="b03-GR-XBb" firstAttribute="top" secondItem="v18-5Y-1wu" secondAttribute="bottom" constant="40" id="xvP-se-ih1"/>
                     <constraint firstItem="Q12-KO-FBf" firstAttribute="trailing" secondItem="v18-5Y-1wu" secondAttribute="trailing" id="zkC-Gp-ZUr"/>

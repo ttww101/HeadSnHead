@@ -41,7 +41,7 @@ open class GuillotineTransitionAnimation: NSObject {
   open var mode: Mode = .presentation
   open var supportView: UIView?
   open var presentButton: UIView?
-  open var animationDuration = 0.6
+  open var animationDuration = 0.04
   
   //MARK: - Private properties
   fileprivate var chromeView: UIView!
@@ -65,9 +65,9 @@ open class GuillotineTransitionAnimation: NSObject {
   fileprivate var fromYDismissalAdjustment: CGFloat = 1.0
   fileprivate var toXPresentationLandscapeAdjustment: CGFloat = 1.0
   fileprivate let initialMenuRotationAngle: CGFloat = -90
-  fileprivate let menuElasticity: CGFloat = 0.6
-  fileprivate let vectorDYCoefficient: Double = 2 / Double.pi
-  fileprivate let menuDensity: CGFloat = 1.5
+  fileprivate let menuElasticity: CGFloat = 0.42
+  fileprivate let vectorDYCoefficient: Double = 15 / Double.pi
+  fileprivate let menuDensity: CGFloat = 7.7
   fileprivate var topOffset: CGFloat = 0
   fileprivate var anchorPoint: CGPoint!
   fileprivate var menu: UIViewController!

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GuillotineMenu
 
 class MenuViewController: UIViewController, GuillotineMenu {
     
@@ -16,7 +17,7 @@ class MenuViewController: UIViewController, GuillotineMenu {
     
     var dismissButton: UIButton?
     var titleLabel: UILabel?
-    open var tappedCloseClosure: (() -> ())? = nil
+    open var tappedLogOutClosure: (() -> ())? = nil
     open var tappedProductClosure: (() -> ())? = nil
     open var tappedActivityClosure: (() -> ())? = nil
     open var tappedSettingClosure: (() -> ())? = nil
@@ -90,7 +91,7 @@ class MenuViewController: UIViewController, GuillotineMenu {
     
     @IBAction func closeMenu(_ sender: UIButton) {
         presentingViewController!.dismiss(animated: true, completion: nil)
-        if let closure = tappedCloseClosure {
+        if let closure = tappedLogOutClosure {
             closure()
         }
     }

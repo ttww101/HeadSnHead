@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import GuillotineMenu
+import Firebase
 
 class BaseDropMenuViewController: BaseViewController {
 
@@ -49,8 +51,22 @@ class BaseDropMenuViewController: BaseViewController {
         menuViewController.tappedSettingClosure = {
             
         }
-        menuViewController.tappedCloseClosure = {
+        
+        menuViewController.tappedLogOutClosure = {
             
+            do {
+                try Auth.auth().signOut()
+            } catch let logoutError {
+                self.showErrorAlert(error: logoutError, myErrorMsg: nil)
+            }
+            
+            if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+                
+                let loginStorybard = UIStoryboard(name: Config.Storyboard.login, bundle: nil)
+                let loginViewController = loginStorybard.instantiateViewController(withIdentifier: Config.Controller.login) as? LoginViewController
+                
+                appDelegate.window?.rootViewController = loginViewController
+            }
         }
         
         presentationAnimator.animationDelegate = menuViewController

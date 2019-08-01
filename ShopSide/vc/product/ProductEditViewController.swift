@@ -51,6 +51,8 @@ extension ProductEditViewController: UITableViewDelegate, UITableViewDataSource 
             }
             cell.didTapOkButtonClosure = {
                 self.navigationController?.popViewController(animated: true)
+                //TODO: Firebase Data
+                
             }
             if let product = product {
                 cell.nameTextView.text = product.name
