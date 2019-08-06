@@ -33,7 +33,7 @@ class BaseViewController: UIViewController {
         self.view.endEditing(true)
     }
 
-    func showErrorAlert(error: Error?, myErrorMsg: String?) {
+    func showErrorAlert(error: Error?, myErrorMsg: String?, completion: (()->())? = nil) {
         
         var errorMsg: String = ""
         
@@ -45,7 +45,11 @@ class BaseViewController: UIViewController {
         
         let alertController = UIAlertController(title: "提示訊息", message: errorMsg, preferredStyle: .alert)
         
-        let defaultAction = UIAlertAction(title: "確認", style: .cancel, handler: nil)
+        let defaultAction = UIAlertAction(title: "確認", style: .cancel, handler: { (alert) in
+            if let completion = completion {
+                completion()
+            }
+        })
         alertController.addAction(defaultAction)
         
         self.present(alertController, animated: true, completion: nil)

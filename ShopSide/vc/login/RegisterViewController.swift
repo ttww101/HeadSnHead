@@ -13,12 +13,24 @@ import YPImagePicker
 
 class RegisterViewController: BaseViewController {
 
-    @IBOutlet weak var userImage: ShadowImageView!
+    @IBOutlet fileprivate weak var userImageView: ShadowImageView!
+    var userImage: UIImage? {
+        didSet {
+            if self.userImage == nil {
+                self.userImageView.image = UIImage(named: "ic_profile")
+                self.userImageView.contentMode = .center
+            } else {
+                self.userImageView.image = self.userImage
+                self.userImageView.contentMode = .scaleAspectFill
+            }
+        }
+    }
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
 
-    let loadingIndicator = balalaLoadingIndicator()
+    let loadingIndicator = LoadingIndicator()
 
     private var userGender = ""
 
@@ -33,9 +45,9 @@ class RegisterViewController: BaseViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
 
-        userImage.layer.cornerRadius = userImage.bounds.size.height / 2.0
-        userImage.layer.borderWidth = 1.0
-        userImage.layer.masksToBounds = true
+        userImageView.layer.cornerRadius = userImageView.bounds.size.height / 2.0
+        userImageView.layer.borderWidth = 1.0
+        userImageView.layer.masksToBounds = true
     }
 
     func setView() {
@@ -56,8 +68,8 @@ class RegisterViewController: BaseViewController {
         nameTextField.delegate = self
 
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-        userImage.isUserInteractionEnabled = true
-        userImage.addGestureRecognizer(tapGestureRecognizer)
+        userImageView.isUserInteractionEnabled = true
+        userImageView.addGestureRecognizer(tapGestureRecognizer)
     }
 
     // MARK: - Select Picture
@@ -92,6 +104,7 @@ class RegisterViewController: BaseViewController {
 
                 guard let currentUser = Auth.auth().currentUser else { return }
 
+                //save photo
                 let uid = currentUser.uid
             
                 let storageRef = Storage.storage().reference()
@@ -99,14 +112,10 @@ class RegisterViewController: BaseViewController {
                     .child(Config.Firebase.Storage.userPhoto + "_" + uid)
 
                 guard
-                    let uploadData = self.userImage.image!.jpegData(compressionQuality: 0.3)
+                    let uploadData = self.userImageView.image!.jpegData(compressionQuality: 0.3)
                     else { return }
-
-                self.loadingIndicator.start()
                 
                 storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
-
-                    self.loadingIndicator.stop()
                     
                     if error != nil {
                         
@@ -118,15 +127,6 @@ class RegisterViewController: BaseViewController {
 
                     let userInfo = User(userID:uid, email: email, name: name, gender: gender,
                                     photoURL: userPhotoURL ?? "")
-
-                    // successfully login
-                    if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-                        
-                        let vc = self.createViewControllerFromStoryboard(name: Config.Storyboard.product, identifier: Config.Controller.productNav)
-                        
-                        appDelegate.window?.rootViewController = vc
-                        
-                    }
                     
                     self.setValueToFirebase(uid: uid, userInfo: userInfo)
                 })
@@ -160,6 +160,15 @@ class RegisterViewController: BaseViewController {
             if err != nil {
                 self.showErrorAlert(error: err, myErrorMsg: nil)
                 return
+            }
+            
+            // successfully
+            if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+                
+                let vc = self.createViewControllerFromStoryboard(name: Config.Storyboard.main, identifier: Config.Controller.Main.landing)
+                
+                appDelegate.window?.rootViewController = vc
+                
             }
 
         })
@@ -239,7 +248,7 @@ extension RegisterViewController {
         picker.didFinishPicking { [unowned picker] items, _ in
             
             if let photo = items.singlePhoto {
-                self.userImage.image = photo.image
+                self.userImage = photo.image
             }
             picker.dismiss(animated: true, completion: nil)
             

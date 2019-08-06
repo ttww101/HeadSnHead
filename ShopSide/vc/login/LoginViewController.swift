@@ -18,7 +18,7 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var passwordTextfield: SkyFloatingLabelTextField!
     @IBOutlet weak var logoImageView: UIImageView!
 
-    let loadingIndicator = balalaLoadingIndicator()
+    let loadingIndicator = LoadingIndicator()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,7 +86,7 @@ class LoginViewController: BaseViewController {
             // successfully login
             if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
 
-                let vc = self.createViewControllerFromStoryboard(name: Config.Storyboard.product, identifier: Config.Controller.productNav)
+                let vc = self.createViewControllerFromStoryboard(name: Config.Storyboard.product, identifier: Config.Controller.Product.nav)
                 
                 appDelegate.window?.rootViewController = vc
                 
@@ -96,7 +96,7 @@ class LoginViewController: BaseViewController {
 
     @IBAction func signUp(_ sender: Any) {
         let sb = UIStoryboard(name: Config.Storyboard.login, bundle: nil)
-        guard let vc = sb.instantiateViewController(withIdentifier: Config.Controller.register) as? RegisterViewController else { return }
+        guard let vc = sb.instantiateViewController(withIdentifier: Config.Controller.Login.register) as? RegisterViewController else { return }
         self.present(vc, animated: true, completion: nil)
     }
 

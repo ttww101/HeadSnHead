@@ -26,7 +26,7 @@ class ProductDetailViewController: BaseViewController, UITableViewDelegate, UITa
             self.navigationItem.largeTitleDisplayMode = .always
         }
         self.title = "Info"
-        tableView.register(UINib(nibName: Config.TableViewCell.productDetail, bundle: nil), forCellReuseIdentifier: Config.TableViewCell.productDetail)
+        tableView.register(UINib(nibName: Config.TableViewCell.Product.detail, bundle: nil), forCellReuseIdentifier: Config.TableViewCell.Product.detail)
         tableView.tableFooterView = UIView()
         
         let btn1 = UIButton()
@@ -45,9 +45,13 @@ class ProductDetailViewController: BaseViewController, UITableViewDelegate, UITa
     }
     
     @objc func editButtonDidTouchUpInside() {
-        guard let vc = self.createViewControllerFromStoryboard(name: Config.Storyboard.product, identifier: Config.Controller.productEdit) as? ProductEditViewController else { return }
+        guard let vc = self.createViewControllerFromStoryboard(name: Config.Storyboard.product, identifier: Config.Controller.Product.edit) as? ProductEditViewController else { return }
         vc.type = .edit
         vc.product = self.product
+        vc.didUpdateClosure = { (product) in
+            self.product = product
+            self.tableView.reloadData()
+        }
         self.navigationController?.pushViewController(vc, animated: true)
     }
         
@@ -56,11 +60,12 @@ class ProductDetailViewController: BaseViewController, UITableViewDelegate, UITa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let product = product else { return UITableViewCell() }
         if (indexPath.row == 0) {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ProductDetailTableViewCell", for: indexPath) as! ProductDetailTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Config.TableViewCell.Product.detail, for: indexPath) as! ProductDetailTableViewCell
             cell.nameLabel.text = product.name
             cell.displayImageView.image = product.avatar
             cell.colorLabel.text = product.color
             cell.descriptionLabel.text = product.description
+            cell.priceLabel.text = product.price
             return cell
         }
         return UITableViewCell()

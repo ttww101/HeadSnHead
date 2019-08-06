@@ -9,7 +9,7 @@
 import Foundation
 import NVActivityIndicatorView
 
-class balalaLoadingIndicator {
+class LoadingIndicator {
 
     var activityData: ActivityData?
 

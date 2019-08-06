@@ -30,7 +30,7 @@
         <!--Product-->
         <scene sceneID="Uoo-ZE-74j">
             <objects>
-                <viewController id="AzI-XC-WO3" userLabel="Product" customClass="ProductViewController" customModule="ShopSide" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AzI-XC-WO3" userLabel="Product" customClass="ProductHomeViewController" customModule="ShopSide" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gkc-7E-nAP"/>
                         <viewControllerLayoutGuide type="bottom" id="aoF-pG-amO"/>

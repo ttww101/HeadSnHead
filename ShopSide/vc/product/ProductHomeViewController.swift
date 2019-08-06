@@ -1,5 +1,5 @@
 //
-//  ProductViewController.swift
+//  ProductHomeViewController.swift
 //  ShopSide
 //
 //  Created by Wu on 2019/7/25.
@@ -9,22 +9,25 @@
 import UIKit
 import DisplaySwitcher
 import SnapKit
+import Firebase
 
 private let animationDuration: TimeInterval = 0.3
 
 private let listLayoutStaticCellHeight: CGFloat = 100
 private let gridLayoutStaticCellHeight: CGFloat = 220
 
-class ProductViewController: BaseDropMenuViewController {
+class ProductHomeViewController: BaseDropMenuViewController {
 
+    let loadingIndicator = LoadingIndicator()
+    
     @IBOutlet fileprivate weak var collectionView: UICollectionView!
     @IBOutlet fileprivate weak var searchBar: UISearchBar!
     @IBOutlet fileprivate weak var rotationButton: SwitchLayoutButton!
     
     fileprivate var tap: UITapGestureRecognizer!
     
-    fileprivate var products = Config.Test.products
-    fileprivate var searchProducts = Config.Test.products
+    fileprivate var products: [Product] = []
+    fileprivate var searchProducts: [Product] = []
     
     fileprivate var isTransitionAvailable = true
     fileprivate lazy var listLayout = DisplaySwitchLayout(staticCellHeight: listLayoutStaticCellHeight, nextLayoutStaticCellHeight: gridLayoutStaticCellHeight, layoutState: .list)
@@ -42,10 +45,9 @@ class ProductViewController: BaseDropMenuViewController {
         setupCollectionView()
     }
     
-    // MARK: - Private methods
-    fileprivate func setupCollectionView() {
-        collectionView.collectionViewLayout = listLayout
-        collectionView.register(ProductCollectionViewCell.cellNib, forCellWithReuseIdentifier:ProductCollectionViewCell.id)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.getProducts()
     }
     
     // MARK: - Actions
@@ -66,19 +68,68 @@ class ProductViewController: BaseDropMenuViewController {
         rotationButton.animationDuration = animationDuration
     }
     
-    
     @IBAction func addButtonDidTouchUpInside(_ sender: Any) {
         self.view.endEditing(true)
-        guard let vc = self.createViewControllerFromStoryboard(name: Config.Storyboard.product, identifier: Config.Controller.productEdit) as? ProductEditViewController else { return }
+        guard let vc = self.createViewControllerFromStoryboard(name: Config.Storyboard.product, identifier: Config.Controller.Product.edit) as? ProductEditViewController else { return }
         vc.type = .add
-        vc.product = Product(name: "", surname: "", avatar: nil, availableCount: 0, color: "", description: "")
+        vc.product = Product(name: "", surname: "", avatar: nil, photoURL: "", availableCount: 0, color: "", description: "", price: "0")
         self.navigationController?.pushViewController(vc, animated: true)
     }
+}
+
+//MARK: Private
+extension ProductHomeViewController {
     
+    func getProducts() {
+        
+        let ref = Database.database().reference().child(Config.Firebase.Product.nodeName)
+        
+        self.loadingIndicator.start()
+        
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if snapshot.exists() {
+                
+                self.loadingIndicator.stop()
+                
+                self.products.removeAll()
+                
+                guard
+                    let snaps = snapshot.children.allObjects as? [DataSnapshot]
+                else
+                    { return }
+                    
+                for snap in snaps {
+                    
+                    let productParser = ProductParser()
+                    
+                    guard
+                        let product = productParser.parserProduct(snap)
+                        else {
+                            continue
+                    }
+                    self.products.append(product)
+                }
+                
+//                    self.gamesList.sort { $0.time < $1.time }
+                self.searchProducts = self.products
+                self.collectionView.reloadData()
+                
+            } else {
+                print("=== Firebase products snapshot does not exist")
+                self.loadingIndicator.stop()
+            }
+        })
+    }
+    
+    fileprivate func setupCollectionView() {
+        collectionView.collectionViewLayout = listLayout
+        collectionView.register(ProductCollectionViewCell.cellNib, forCellWithReuseIdentifier:ProductCollectionViewCell.id)
+    }
 }
 
 // MARK: - UICollectionViewDataSource, UICollectionViewDelegate
-extension ProductViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension ProductHomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return searchProducts.count
@@ -102,7 +153,7 @@ extension ProductViewController: UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let vc = self.createViewControllerFromStoryboard(name: Config.Storyboard.product, identifier: Config.Controller.productDetail)as? ProductDetailViewController else { return }
+        guard let vc = self.createViewControllerFromStoryboard(name: Config.Storyboard.product, identifier: Config.Controller.Product.detail)as? ProductDetailViewController else { return }
         vc.product = searchProducts[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -122,13 +173,13 @@ extension ProductViewController: UICollectionViewDataSource, UICollectionViewDel
 }
 
 //MARK: UISearchBarDelegate
-extension ProductViewController: UISearchBarDelegate {
+extension ProductHomeViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {
             searchProducts = products
         } else {
-            searchProducts = searchProducts.filter { return $0.name.contains(searchText) }
+            searchProducts = searchProducts.filter { return $0.name.lowercased().contains(searchText.lowercased()) }
         }
         
         collectionView.reloadData()

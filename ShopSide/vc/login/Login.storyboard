@@ -237,7 +237,7 @@
         <!--Register View Controller-->
         <scene sceneID="QV6-wh-HJA">
             <objects>
-                <viewController storyboardIdentifier="RegisterViewController" id="nIE-Tg-ypb" customClass="RegisterViewController" customModule="ShopSide" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="RegisterViewController" storyboardIdentifier="RegisterViewController" id="nIE-Tg-ypb" customClass="RegisterViewController" customModule="ShopSide" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RH2-XA-CI9"/>
                         <viewControllerLayoutGuide type="bottom" id="SKD-WU-a7z"/>
@@ -552,7 +552,7 @@
                         <outlet property="emailTextField" destination="Egr-1n-a89" id="I0e-dE-ZEP"/>
                         <outlet property="nameTextField" destination="GJY-af-IbA" id="s06-wn-rQz"/>
                         <outlet property="passwordTextField" destination="6la-8k-mnw" id="Qn2-uI-sU0"/>
-                        <outlet property="userImage" destination="5Ci-vo-R3D" id="vyk-OK-HUi"/>
+                        <outlet property="userImageView" destination="5Ci-vo-R3D" id="qfC-UW-0v8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSm-Ep-sOh" userLabel="First Responder" sceneMemberID="firstResponder"/>

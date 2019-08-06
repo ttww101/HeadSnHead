@@ -20,23 +20,33 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCollectionViewCell" id="gdF-wQ-JiZ" customClass="ProductCollectionViewCell" customModule="ShopSide" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="157"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="162"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="157"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="162"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xuV-JL-rj1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="157"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="162"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="none Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0q-pJ-NJd">
-                                <rect key="frame" x="95" y="65.5" width="209" height="18"/>
+                                <rect key="frame" x="95" y="65.5" width="144" height="17.5"/>
                                 <fontDescription key="fontDescription" name="Dosis-ExtraLight" family="Dosis" pointSize="15"/>
                                 <color key="textColor" red="0.39607843139999999" green="0.52941176469999995" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="753" text="$10000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3Q-3A-jsd">
+                                <rect key="frame" x="247" y="134" width="57" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.94229962369999998" green="1" blue="0.68576821340000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1215686275" green="0.1450980392" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="A3Q-3A-jsd" secondAttribute="bottom" constant="8" id="649-27-ufg"/>
+                            <constraint firstItem="A3Q-3A-jsd" firstAttribute="leading" secondItem="i0q-pJ-NJd" secondAttribute="trailing" constant="8" id="nBE-7X-Nw4"/>
+                        </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23 Lefts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tae-yd-Jjo">
                         <rect key="frame" x="95" y="41" width="209" height="17.5"/>
@@ -51,10 +61,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNy-hc-AKS" userLabel="Container View">
-                        <rect key="frame" x="0.0" y="0.0" width="80" height="157"/>
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="162"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grace Simpson" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffm-Pv-DOi">
                                 <rect key="frame" x="10" y="90" width="60" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="2Km-E0-87T"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -62,12 +75,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ffm-Pv-DOi" secondAttribute="bottom" constant="10" id="SQg-Yo-yAS"/>
                             <constraint firstItem="ffm-Pv-DOi" firstAttribute="leading" secondItem="bNy-hc-AKS" secondAttribute="leading" constant="10" id="bND-9Z-Tui"/>
                             <constraint firstAttribute="trailing" secondItem="ffm-Pv-DOi" secondAttribute="trailing" constant="10" id="xtL-Jy-8km"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rMa-bq-TqE">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rMa-bq-TqE">
                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="IqF-8v-QP5"/>
@@ -79,6 +91,7 @@
             <constraints>
                 <constraint firstItem="i0q-pJ-NJd" firstAttribute="leading" secondItem="tae-yd-Jjo" secondAttribute="leading" id="3Gp-h4-Kd8"/>
                 <constraint firstItem="ffm-Pv-DOi" firstAttribute="top" secondItem="rMa-bq-TqE" secondAttribute="bottom" constant="10" id="4CC-AO-cBd"/>
+                <constraint firstItem="A3Q-3A-jsd" firstAttribute="trailing" secondItem="hwV-Zy-XbA" secondAttribute="trailing" id="D0R-xc-N1f"/>
                 <constraint firstItem="rMa-bq-TqE" firstAttribute="top" secondItem="gdF-wQ-JiZ" secondAttribute="top" id="DRm-1f-DUn"/>
                 <constraint firstAttribute="trailing" secondItem="xuV-JL-rj1" secondAttribute="trailing" id="HfT-YS-LTn"/>
                 <constraint firstItem="i0q-pJ-NJd" firstAttribute="top" secondItem="tae-yd-Jjo" secondAttribute="bottom" constant="7" id="LVq-NB-NHV"/>
@@ -95,23 +108,23 @@
                 <constraint firstAttribute="trailing" secondItem="hwV-Zy-XbA" secondAttribute="trailing" constant="16" id="m41-Cu-UGH"/>
                 <constraint firstItem="rMa-bq-TqE" firstAttribute="width" secondItem="bNy-hc-AKS" secondAttribute="width" id="niJ-Zv-KLj"/>
                 <constraint firstAttribute="bottom" secondItem="xuV-JL-rj1" secondAttribute="bottom" id="oUe-zB-fmf"/>
-                <constraint firstItem="i0q-pJ-NJd" firstAttribute="trailing" secondItem="tae-yd-Jjo" secondAttribute="trailing" id="rsi-Y1-xm3"/>
                 <constraint firstItem="tae-yd-Jjo" firstAttribute="top" secondItem="hwV-Zy-XbA" secondAttribute="bottom" constant="7" id="ycR-HR-rHV"/>
             </constraints>
-            <size key="customSize" width="329" height="127"/>
+            <size key="customSize" width="329" height="132"/>
             <connections>
                 <outlet property="avatarImageView" destination="rMa-bq-TqE" id="rP2-35-59b"/>
                 <outlet property="avatarImageViewHeightConstraint" destination="fNl-vd-0HY" id="SHE-aA-uST"/>
                 <outlet property="avatarImageViewWidthConstraint" destination="IqF-8v-QP5" id="9b4-mv-RS2"/>
                 <outlet property="backgroundGradientView" destination="xuV-JL-rj1" id="ZjJ-Jh-wOL"/>
                 <outlet property="colorLabel" destination="i0q-pJ-NJd" id="cLD-hy-zRu"/>
+                <outlet property="moneyLabel" destination="A3Q-3A-jsd" id="Tq3-Av-ymH"/>
                 <outlet property="nameGridLabel" destination="ffm-Pv-DOi" id="kal-L5-uE4"/>
                 <outlet property="nameListLabel" destination="hwV-Zy-XbA" id="Uh3-pU-iDZ"/>
                 <outlet property="nameListLabelLeadingConstraint" destination="Peb-am-J2S" id="S32-gL-Kke"/>
                 <outlet property="statisticLabel" destination="tae-yd-Jjo" id="Uhb-e0-xX9"/>
                 <outlet property="statisticLabelLeadingConstraint" destination="PQW-GR-T8I" id="fFh-ov-fJx"/>
             </connections>
-            <point key="canvasLocation" x="388.80000000000001" y="256.82158920539734"/>
+            <point key="canvasLocation" x="388.80000000000001" y="259.07046476761622"/>
         </collectionViewCell>
     </objects>
 </document>

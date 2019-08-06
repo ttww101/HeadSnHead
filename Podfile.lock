@@ -1,4 +1,5 @@
 PODS:
+  - BTNavigationDropdownMenu (0.5)
   - DisplaySwitcher (1.0.1)
   - Firebase/Auth (6.3.0):
     - Firebase/CoreOnly
@@ -98,6 +99,7 @@ PODS:
     - SteviaLayout (~> 4.4.1)
 
 DEPENDENCIES:
+  - BTNavigationDropdownMenu
   - DisplaySwitcher
   - Firebase/Auth
   - Firebase/Core
@@ -117,6 +119,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - BTNavigationDropdownMenu
     - DisplaySwitcher
     - Firebase
     - FirebaseAnalytics
@@ -147,6 +150,7 @@ SPEC REPOS:
     - YPImagePicker
 
 SPEC CHECKSUMS:
+  BTNavigationDropdownMenu: ba3a26fdb6a56c4721c31df8a0875106c259663a
   DisplaySwitcher: 5f725284c28cdf22ea7ba2eee8e8f7e7cb9cdf87
   Firebase: 8432d732974498afd5987e9001a05f90f1a3d625
   FirebaseAnalytics: 470ddab7253b21ad5a40bebd4a9903d7ae19386a
@@ -176,6 +180,6 @@ SPEC CHECKSUMS:
   SteviaLayout: 523469269059f2c6da02820bb2ff28a5fe0780aa
   YPImagePicker: 8039f89ad79281545fa868486f32d9bf5d65ede1
 
-PODFILE CHECKSUM: 855d91f8f73a8d490a4ba3320a44d7092dd19023
+PODFILE CHECKSUM: 3e7ff5ff126535f3ed03c8fdc125edcebf032cdf
 
 COCOAPODS: 1.5.3

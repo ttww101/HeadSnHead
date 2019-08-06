@@ -39,14 +39,15 @@ class BaseDropMenuViewController: BaseViewController {
         menuViewController.transitioningDelegate = self
         
         menuViewController.tappedActivityClosure = {
-            let nav = UINavigationController(rootViewController: ActivityViewController())
+            let storyboard = UIStoryboard(name: Config.Storyboard.activity, bundle: nil)
+            guard let nav = storyboard.instantiateViewController(withIdentifier: Config.Controller.Activity.nav) as? UINavigationController else { return }
             UIApplication.shared.delegate?.window??.rootViewController = nav
         }
         menuViewController.tappedProductClosure = {
-            let storyboard = UIStoryboard(name: "Product", bundle: nil)
-            guard let productNav = storyboard.instantiateViewController(withIdentifier: "ProductNavigationController") as? UINavigationController else { return }
+            let storyboard = UIStoryboard(name: Config.Storyboard.product, bundle: nil)
+            guard let nav = storyboard.instantiateViewController(withIdentifier: Config.Controller.Product.nav) as? UINavigationController else { return }
             
-            UIApplication.shared.delegate?.window??.rootViewController = productNav
+            UIApplication.shared.delegate?.window??.rootViewController = nav
         }
         menuViewController.tappedSettingClosure = {
             
@@ -63,7 +64,7 @@ class BaseDropMenuViewController: BaseViewController {
             if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
                 
                 let loginStorybard = UIStoryboard(name: Config.Storyboard.login, bundle: nil)
-                let loginViewController = loginStorybard.instantiateViewController(withIdentifier: Config.Controller.login) as? LoginViewController
+                let loginViewController = loginStorybard.instantiateViewController(withIdentifier: Config.Controller.Login.login) as? LoginViewController
                 
                 appDelegate.window?.rootViewController = loginViewController
             }

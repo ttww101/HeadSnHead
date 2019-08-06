@@ -19,6 +19,7 @@ class ProductCollectionViewCell: UICollectionViewCell, CellInterface {
     @IBOutlet fileprivate weak var nameGridLabel: UILabel!
     @IBOutlet weak var statisticLabel: UILabel!
     @IBOutlet weak var colorLabel: UILabel!
+    @IBOutlet weak var moneyLabel: UILabel!
 
     // avatarImageView constraints
     @IBOutlet fileprivate weak var avatarImageViewWidthConstraint: NSLayoutConstraint!
@@ -37,15 +38,20 @@ class ProductCollectionViewCell: UICollectionViewCell, CellInterface {
     fileprivate var avatarGridLayoutSize: CGFloat = 0.0
     fileprivate var initialLabelsLeadingConstraintValue: CGFloat = 0.0
     
-    func bind(_ user: Product) {
-        avatarImageView.image = user.avatar
-        nameListLabel.text = user.name.localized + " " + user.surname.localized
+    func bind(_ product: Product) {
+        nameListLabel.text = product.name.localized + " " + product.surname.localized
         nameGridLabel.text = nameListLabel.text
-        let productCountString = (String(user.availableCount) + " Left").localized
-        let productColorString = (String(user.color)).localized
-        
+        let productCountString = (String(product.availableCount) + " Left").localized
+        let productColorString = (String(product.color)).localized
+        self.avatarImageView.image = product.avatar
+        product.productDidChangedImage = { (image) in
+            DispatchQueue.main.async {
+                self.avatarImageView.image = image
+            }
+        }
         statisticLabel.text = productCountString
         colorLabel.text = productColorString
+        moneyLabel.text = "$ \(product.price)"
     }
     
     func setupGridLayoutConstraints(_ transitionProgress: CGFloat, cellWidth: CGFloat) {

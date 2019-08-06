@@ -37,12 +37,6 @@
                         <color key="textColor" red="0.1619408312" green="0.1619408312" blue="0.1619408312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eha-75-ELq">
-                        <rect key="frame" x="30" y="558.5" width="103.5" height="24"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                        <color key="textColor" red="0.1619408312" green="0.1619408312" blue="0.1619408312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="RdM-SO-hlm" customClass="ShadowImageView" customModule="ShopSide" customModuleProvider="target">
                         <rect key="frame" x="20" y="20" width="379" height="252.5"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -121,7 +115,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="onDrag" text="WHITE / RAW WHITE / OFF WHITE" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="Ijv-s8-XHD">
-                        <rect key="frame" x="209.5" y="466.5" width="179.5" height="52"/>
+                        <rect key="frame" x="194.5" y="466.5" width="194.5" height="52"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -130,14 +124,14 @@
                         </connections>
                     </textView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="60j-Qo-neL" userLabel="Seperator View">
-                        <rect key="frame" x="209.5" y="518.5" width="179.5" height="1"/>
+                        <rect key="frame" x="194.5" y="518.5" width="194.5" height="1"/>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="e5R-bF-osa"/>
                         </constraints>
                     </view>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="g73-Jc-RkY">
-                        <rect key="frame" x="25" y="590.5" width="369" height="123.5"/>
+                        <rect key="frame" x="25" y="659" width="369" height="123.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <string key="text">This product is offered in men's sizing.
 There is an approximate 1.5-size difference between men's and women's sizing.
@@ -149,15 +143,14 @@ For example, a women’s size 8.5 is roughly equivalent to a men’s size 7.</st
                         </connections>
                     </textView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aaY-Vz-6Q2" userLabel="Seperator View">
-                        <rect key="frame" x="25" y="714" width="369" height="1"/>
+                        <rect key="frame" x="25" y="782.5" width="369" height="1"/>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="JDV-gl-Ol0"/>
                             <constraint firstAttribute="height" constant="1" id="njQ-dx-VIr"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJK-bf-IEt" customClass="LGButton" customModule="LGButton">
-                        <rect key="frame" x="25" y="733" width="369" height="61.5"/>
+                        <rect key="frame" x="25" y="801.5" width="369" height="61.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="eJK-bf-IEt" secondAttribute="height" multiplier="6:1" id="bpb-Vf-HFM"/>
@@ -192,22 +185,64 @@ For example, a women’s size 8.5 is roughly equivalent to a men’s size 7.</st
                             <action selector="okButtonDidTouchUpInside" destination="KGk-i7-Jjw" eventType="touchUpInside" id="VYy-Tl-goe"/>
                         </connections>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGv-oc-YRH">
+                        <rect key="frame" x="30" y="558.5" width="45.5" height="36.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                        <color key="textColor" red="0.1619408312" green="0.1619408312" blue="0.1619408312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="onDrag" text="100" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="cqE-Bi-Ac1" userLabel="Price Text View">
+                        <rect key="frame" x="329" y="558.5" width="60" height="36.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartInsertDeleteType="no" smartQuotesType="no"/>
+                        <connections>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="UQl-X5-ccn"/>
+                        </connections>
+                    </textView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ibd-vb-J8Y" userLabel="Seperator View">
+                        <rect key="frame" x="318" y="595" width="71" height="1"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="uOX-B9-93L"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jpm-bA-e1W">
+                        <rect key="frame" x="318" y="558.5" width="11" height="36.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eha-75-ELq">
+                        <rect key="frame" x="30" y="627" width="103.5" height="24"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                        <color key="textColor" red="0.1619408312" green="0.1619408312" blue="0.1619408312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="g73-Jc-RkY" firstAttribute="top" secondItem="eha-75-ELq" secondAttribute="bottom" constant="8" id="2Yd-Jb-4w7"/>
                     <constraint firstItem="Ijv-s8-XHD" firstAttribute="trailing" secondItem="v18-5Y-1wu" secondAttribute="trailing" id="3c5-FC-tM0"/>
                     <constraint firstItem="urN-Vy-ZjH" firstAttribute="top" secondItem="b03-GR-XBb" secondAttribute="bottom" constant="40" id="5LI-Rr-0JE"/>
+                    <constraint firstItem="eha-75-ELq" firstAttribute="top" secondItem="cqE-Bi-Ac1" secondAttribute="bottom" constant="32" id="6wC-WY-pBG"/>
+                    <constraint firstItem="Jpm-bA-e1W" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eha-75-ELq" secondAttribute="trailing" constant="16" id="7Mv-ck-B6V"/>
+                    <constraint firstItem="cqE-Bi-Ac1" firstAttribute="top" secondItem="uGv-oc-YRH" secondAttribute="top" id="7l7-43-ygE"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eJK-bf-IEt" secondAttribute="bottom" constant="25" id="7v2-ae-1hu"/>
                     <constraint firstItem="n8b-XE-PG0" firstAttribute="bottom" secondItem="v18-5Y-1wu" secondAttribute="bottom" id="7zr-kj-Kgo"/>
+                    <constraint firstItem="uGv-oc-YRH" firstAttribute="bottom" secondItem="cqE-Bi-Ac1" secondAttribute="bottom" id="9Rq-w5-rCw"/>
                     <constraint firstItem="b03-GR-XBb" firstAttribute="leading" secondItem="n8b-XE-PG0" secondAttribute="leading" id="9lk-X4-JpL"/>
+                    <constraint firstItem="uGv-oc-YRH" firstAttribute="top" secondItem="Ijv-s8-XHD" secondAttribute="bottom" constant="40" id="BLq-pS-euo"/>
                     <constraint firstItem="eJK-bf-IEt" firstAttribute="leading" secondItem="g73-Jc-RkY" secondAttribute="leading" id="EYp-jv-X6R"/>
                     <constraint firstItem="eJK-bf-IEt" firstAttribute="trailing" secondItem="g73-Jc-RkY" secondAttribute="trailing" id="F5W-hO-Lmc"/>
                     <constraint firstItem="eha-75-ELq" firstAttribute="leading" secondItem="urN-Vy-ZjH" secondAttribute="leading" id="Fgm-Bf-Coh"/>
                     <constraint firstItem="v18-5Y-1wu" firstAttribute="top" secondItem="n8b-XE-PG0" secondAttribute="top" id="HAQ-Dw-F2h"/>
                     <constraint firstAttribute="trailing" secondItem="RdM-SO-hlm" secondAttribute="trailing" constant="20" id="JFv-GG-uw4"/>
+                    <constraint firstItem="Jpm-bA-e1W" firstAttribute="bottom" secondItem="cqE-Bi-Ac1" secondAttribute="bottom" id="Jwu-Of-Gjw"/>
                     <constraint firstItem="eJK-bf-IEt" firstAttribute="top" secondItem="g73-Jc-RkY" secondAttribute="bottom" constant="19" id="Mo0-7Y-dkv"/>
+                    <constraint firstItem="cqE-Bi-Ac1" firstAttribute="leading" secondItem="Jpm-bA-e1W" secondAttribute="trailing" id="Myu-Lv-LYT"/>
                     <constraint firstItem="RdM-SO-hlm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="NA5-8H-EJB"/>
                     <constraint firstItem="v18-5Y-1wu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eha-75-ELq" secondAttribute="trailing" constant="16" id="RBw-cm-ppT"/>
+                    <constraint firstItem="uGv-oc-YRH" firstAttribute="leading" secondItem="urN-Vy-ZjH" secondAttribute="leading" id="RCh-qf-twy"/>
                     <constraint firstItem="60j-Qo-neL" firstAttribute="top" secondItem="Ijv-s8-XHD" secondAttribute="bottom" id="Sf0-0S-dMI"/>
                     <constraint firstItem="g73-Jc-RkY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="TwI-E1-6it"/>
                     <constraint firstItem="60j-Qo-neL" firstAttribute="leading" secondItem="Ijv-s8-XHD" secondAttribute="leading" id="W5G-mB-P3I"/>
@@ -217,21 +252,26 @@ For example, a women’s size 8.5 is roughly equivalent to a men’s size 7.</st
                     <constraint firstItem="Ijv-s8-XHD" firstAttribute="top" secondItem="urN-Vy-ZjH" secondAttribute="top" id="Wex-r7-n5Y"/>
                     <constraint firstItem="n8b-XE-PG0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="WpE-nF-v0v"/>
                     <constraint firstItem="urN-Vy-ZjH" firstAttribute="bottom" secondItem="Ijv-s8-XHD" secondAttribute="bottom" id="Y5u-Hc-dIO"/>
-                    <constraint firstItem="Ijv-s8-XHD" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="3:7" id="Yth-T0-2eb"/>
+                    <constraint firstItem="Ijv-s8-XHD" firstAttribute="width" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="3:7" id="Yth-T0-2eb"/>
                     <constraint firstAttribute="trailing" secondItem="v18-5Y-1wu" secondAttribute="trailing" constant="30" id="akB-LX-GCv"/>
                     <constraint firstItem="Ijv-s8-XHD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eha-75-ELq" secondAttribute="trailing" constant="16" id="g5R-wT-34w"/>
+                    <constraint firstItem="Ibd-vb-J8Y" firstAttribute="leading" secondItem="Jpm-bA-e1W" secondAttribute="leading" id="gOa-A6-Eyn"/>
+                    <constraint firstItem="cqE-Bi-Ac1" firstAttribute="trailing" secondItem="Ijv-s8-XHD" secondAttribute="trailing" id="hCq-Na-Yy1"/>
                     <constraint firstItem="RdM-SO-hlm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="hYH-Kf-CMZ"/>
                     <constraint firstItem="aaY-Vz-6Q2" firstAttribute="leading" secondItem="g73-Jc-RkY" secondAttribute="leading" id="i0m-3b-6MT"/>
+                    <constraint firstItem="Ibd-vb-J8Y" firstAttribute="trailing" secondItem="cqE-Bi-Ac1" secondAttribute="trailing" id="jNX-iB-iwp"/>
                     <constraint firstItem="n8b-XE-PG0" firstAttribute="top" secondItem="RdM-SO-hlm" secondAttribute="bottom" constant="20" id="o5i-Kr-cPY"/>
                     <constraint firstItem="Q12-KO-FBf" firstAttribute="top" secondItem="v18-5Y-1wu" secondAttribute="bottom" id="omT-Gg-z8H"/>
                     <constraint firstItem="60j-Qo-neL" firstAttribute="trailing" secondItem="Ijv-s8-XHD" secondAttribute="trailing" id="qXZ-g9-yOo"/>
-                    <constraint firstItem="eha-75-ELq" firstAttribute="top" secondItem="Ijv-s8-XHD" secondAttribute="bottom" constant="40" id="rrC-ff-9QA"/>
                     <constraint firstItem="Q12-KO-FBf" firstAttribute="leading" secondItem="v18-5Y-1wu" secondAttribute="leading" id="tvN-5D-FS2"/>
                     <constraint firstItem="urN-Vy-ZjH" firstAttribute="leading" secondItem="b03-GR-XBb" secondAttribute="leading" id="u83-aD-Jqo"/>
                     <constraint firstItem="aaY-Vz-6Q2" firstAttribute="trailing" secondItem="g73-Jc-RkY" secondAttribute="trailing" id="ui6-Sd-Ot2"/>
+                    <constraint firstItem="Ibd-vb-J8Y" firstAttribute="top" secondItem="cqE-Bi-Ac1" secondAttribute="bottom" id="uvS-Tm-SlL"/>
                     <constraint firstItem="v18-5Y-1wu" firstAttribute="width" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="3:7" id="wEX-YM-av9"/>
+                    <constraint firstItem="cqE-Bi-Ac1" firstAttribute="width" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1:7" id="wT9-Tm-0dh"/>
                     <constraint firstItem="8ZD-ON-bbx" firstAttribute="trailing" secondItem="Q12-KO-FBf" secondAttribute="trailing" id="xdb-wm-Q8Q"/>
                     <constraint firstItem="b03-GR-XBb" firstAttribute="top" secondItem="v18-5Y-1wu" secondAttribute="bottom" constant="40" id="xvP-se-ih1"/>
+                    <constraint firstItem="Jpm-bA-e1W" firstAttribute="top" secondItem="cqE-Bi-Ac1" secondAttribute="top" id="yJi-2H-WDx"/>
                     <constraint firstItem="Q12-KO-FBf" firstAttribute="trailing" secondItem="v18-5Y-1wu" secondAttribute="trailing" id="zkC-Gp-ZUr"/>
                 </constraints>
             </tableViewCellContentView>
@@ -241,6 +281,9 @@ For example, a women’s size 8.5 is roughly equivalent to a men’s size 7.</st
                 <outlet property="colorTextView" destination="Ijv-s8-XHD" id="ghA-iR-YnX"/>
                 <outlet property="descriptionTextView" destination="g73-Jc-RkY" id="Jaw-mC-AbX"/>
                 <outlet property="nameTextView" destination="v18-5Y-1wu" id="IgQ-aC-r83"/>
+                <outlet property="okButton" destination="eJK-bf-IEt" id="QVk-Po-MBC"/>
+                <outlet property="priceTextView" destination="cqE-Bi-Ac1" id="Oj8-Cr-Ohr"/>
+                <outlet property="stepper" destination="8ZD-ON-bbx" id="jyR-vp-gLh"/>
             </connections>
             <point key="canvasLocation" x="209.42028985507247" y="702.79017857142856"/>
         </tableViewCell>

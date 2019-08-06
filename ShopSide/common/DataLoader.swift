@@ -9,6 +9,8 @@ enum NetworkError: Error {
     
     case formURLFail
     
+    case emptyData
+    
     case other
 
 }

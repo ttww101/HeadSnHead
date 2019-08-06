@@ -24,6 +24,7 @@ target 'ShopSide' do
  
   #Custom
   pod 'GuillotineMenu'
+  pod 'BTNavigationDropdownMenu'
   pod 'DisplaySwitcher'
   pod 'SkyFloatingLabelTextField'
   pod 'LTMorphingLabel'
