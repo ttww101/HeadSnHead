@@ -73,5 +73,17 @@ extension UIColor {
     static func lightRoss() -> UIColor {
         return UIColor.hexColor(with: "dd7663")
     }
+    
+    static func jasper() -> UIColor {
+        return UIColor.hexColor(with: "658781")
+    }
+    
+    static func lightBlueGray() -> UIColor {
+        return UIColor.hexColor(with: "8FA0AB")
+    }
+    
+    static func darkBlueGray() -> UIColor {
+        return UIColor.hexColor(with: "8297AB")
+    }
 }
 

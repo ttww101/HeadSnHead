@@ -15,6 +15,8 @@ class FirebaseManager {
     
     let loadingIndicator = LoadingIndicator()
     
+    typealias DataSnapshotHandler = (Result<DataSnapshot>) -> Void
+    
     typealias DataSnapshotsHandler = (Result<[DataSnapshot]>) -> Void
     
     typealias UserHandler = (User?, Error?) -> Void
@@ -68,6 +70,25 @@ extension FirebaseManager {
 //MARK: Datebase
 extension FirebaseManager {
 
+    func getDataSnapshot(ref: DatabaseReference, completion: @escaping (DataSnapshotHandler)) {
+        
+        self.loadingIndicator.start()
+        
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            self.loadingIndicator.stop()
+            
+            if snapshot.exists() {
+                
+                completion(.success(snapshot))
+                
+            } else {
+                
+                completion(.error(NetworkError.emptyData))
+            }
+        })
+    }
+    
     func getDataSnapshots(ref: DatabaseReference, completion: @escaping (DataSnapshotsHandler)) {
         
         self.loadingIndicator.start()
@@ -121,7 +142,7 @@ extension FirebaseManager {
         })
     }
     
-    func updateData(value: [String: Any],ref: DatabaseReference, childID: String, completion: (()->())?) {
+    func updateData(value: [String: Any], ref: DatabaseReference, childID: String, completion: ((Error?)->())?) {
         
         self.loadingIndicator.start()
         
@@ -130,13 +151,30 @@ extension FirebaseManager {
             self.loadingIndicator.stop()
             
             if err != nil {
+                if let completion = completion {
+                    completion(err)
+                }
                 return
             } else {
                 if let completion = completion {
-                    completion()
+                    completion(nil)
                 }
             }
         })
+    }
+    
+    func deleteData(ref: DatabaseReference, completion: (()->())?) {
+        
+        self.loadingIndicator.start()
+        
+        ref.removeValue { (error, ref) in
+            
+            self.loadingIndicator.stop()
+            
+            if let completion = completion {
+                completion()
+            }
+        }
     }
     
 }

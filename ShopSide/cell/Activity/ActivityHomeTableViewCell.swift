@@ -1,5 +1,5 @@
 //
-//  ActivityHomeTableViewCell.swift
+//  ActivityHomeTableViewself.swift
 //  ShopSide
 //
 //  Created by Wu on 2019/8/5.
@@ -11,6 +11,7 @@ import UIKit
 class ActivityHomeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var titleSeperatorView: UIView!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var ownerNameLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
@@ -37,5 +38,33 @@ class ActivityHomeTableViewCell: UITableViewCell {
                 self.ownerImageView.contentMode = .scaleAspectFill
             }
         }
+    }
+    
+    func configCell(with activity: Activity) {
+        self.titleLabel.text = activity.title
+        self.contentLabel.text = activity.content
+        self.ownerNameLabel.text = activity.owner
+        self.timeLabel.text = activity.time
+        self.productImage = activity.productImage
+        activity.didDownloadFinishedProductImage = { image in
+            self.productImage = image
+        }
+        self.ownerImage = activity.ownerImage
+        activity.didDownloadFinishedOwnerImage = { image in
+            self.ownerImage = image
+        }
+        
+        var color: UIColor = .darkGray
+        switch activity.type {
+        case ActivityType.update:
+            color = .darkBlueGray()
+        case ActivityType.create:
+            color = .darkGrass()
+        case ActivityType.delete:
+            color = .lightRoss()
+        }
+        self.titleLabel.textColor = color
+        self.titleSeperatorView.backgroundColor = color
+        
     }
 }

@@ -12,11 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductDetailTableViewCell" rowHeight="817" id="KGk-i7-Jjw" customClass="ProductDetailTableViewCell" customModule="ShopSide" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="534" height="817"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductDetailTableViewCell" rowHeight="1017" id="KGk-i7-Jjw" customClass="ProductDetailTableViewCell" customModule="ShopSide" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="534" height="1017"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="534" height="816.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="534" height="1016.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30z-nU-NcL">
@@ -78,8 +78,115 @@
                             <userDefinedRuntimeAttribute type="image" keyPath="image" value="ic_tag"/>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iqR-Gh-iyb" customClass="LGButton" customModule="LGButton">
+                        <rect key="frame" x="16" y="824" width="502" height="84"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="iqR-Gh-iyb" secondAttribute="height" multiplier="6:1" id="U5m-ay-Gjv"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="titleFontName" value="Menlo"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="titleFontSize">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="fullyRoundedCorners" value="NO"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="image" keyPath="leftImageSrc" value="ic_delete"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="leftAligned" value="NO"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="leftImageWidth">
+                                <real key="value" value="60"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="leftIconColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="string" keyPath="leftIconFontName" value="Menlo"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="leftImageHeight">
+                                <real key="value" value="30"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                <color key="value" red="0.92909263959390864" green="0.40908661055626794" blue="0.40096565873434598" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="verticalOrientation" value="NO"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="showTouchFeedback" value="NO"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="1" height="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="deleteButtonDidTouchUpInside:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ZiC-jp-80D"/>
+                        </connections>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wSR-6d-R5j" customClass="LGButton" customModule="LGButton">
+                        <rect key="frame" x="16" y="724.5" width="502" height="83.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="wSR-6d-R5j" secondAttribute="height" multiplier="6:1" id="75P-sq-OiN"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="titleFontName" value="Menlo"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="titleFontSize">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="fullyRoundedCorners" value="NO"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="image" keyPath="leftImageSrc" value="ic_deliver"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="leftAligned" value="NO"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="leftImageWidth">
+                                <real key="value" value="60"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="leftIconColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="string" keyPath="leftIconFontName" value="Menlo"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="leftImageHeight">
+                                <real key="value" value="35"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                <color key="value" red="0.39623973688903202" green="0.71896524140913698" blue="0.0061768514238362115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="verticalOrientation" value="NO"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="showTouchFeedback" value="NO"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="1" height="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="deliverButtonDidTouchUpInside:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="AiA-Ni-aAW"/>
+                        </connections>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="wSR-6d-R5j" secondAttribute="trailing" constant="16" id="6y3-Zj-dIA"/>
                     <constraint firstItem="Ipy-vI-EMY" firstAttribute="trailing" secondItem="30z-nU-NcL" secondAttribute="trailing" id="8Mg-cD-U9D"/>
                     <constraint firstItem="30z-nU-NcL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="8Y7-gh-YRR"/>
                     <constraint firstItem="ZJ9-3C-tFj" firstAttribute="top" secondItem="VCV-80-LX9" secondAttribute="bottom" constant="30" id="ALF-fT-kZX"/>
@@ -90,17 +197,22 @@
                     <constraint firstAttribute="trailing" secondItem="30z-nU-NcL" secondAttribute="trailing" constant="16" id="La9-K4-6r0"/>
                     <constraint firstItem="30z-nU-NcL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="Oyf-L5-xlz"/>
                     <constraint firstItem="hUT-oV-Uep" firstAttribute="top" secondItem="ZJ9-3C-tFj" secondAttribute="bottom" constant="16" id="PYm-si-7Kf"/>
+                    <constraint firstItem="iqR-Gh-iyb" firstAttribute="top" secondItem="wSR-6d-R5j" secondAttribute="bottom" constant="16" id="REx-L9-eil"/>
                     <constraint firstItem="jPw-DQ-imh" firstAttribute="trailing" secondItem="VCV-80-LX9" secondAttribute="trailing" id="RwU-LD-mZr"/>
                     <constraint firstItem="ZJ9-3C-tFj" firstAttribute="leading" secondItem="dUf-OJ-yC0" secondAttribute="leading" id="TE0-zB-AvX"/>
                     <constraint firstItem="Ipy-vI-EMY" firstAttribute="leading" secondItem="30z-nU-NcL" secondAttribute="leading" id="UiA-iu-DB0"/>
+                    <constraint firstItem="wSR-6d-R5j" firstAttribute="top" secondItem="jPw-DQ-imh" secondAttribute="bottom" constant="55" id="X4z-u0-KEm"/>
+                    <constraint firstAttribute="trailing" secondItem="iqR-Gh-iyb" secondAttribute="trailing" constant="16" id="XLt-32-Yeb"/>
                     <constraint firstItem="dUf-OJ-yC0" firstAttribute="top" secondItem="ctB-Fz-GZc" secondAttribute="bottom" constant="30" id="XRL-C5-zFo"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="jPw-DQ-imh" secondAttribute="bottom" constant="36" id="bZ1-4U-vZJ"/>
                     <constraint firstItem="VCV-80-LX9" firstAttribute="trailing" secondItem="dUf-OJ-yC0" secondAttribute="trailing" id="dKy-LO-NYZ"/>
                     <constraint firstItem="hUT-oV-Uep" firstAttribute="leading" secondItem="ZJ9-3C-tFj" secondAttribute="leading" id="epb-Bg-FsE"/>
                     <constraint firstItem="Ipy-vI-EMY" firstAttribute="top" secondItem="30z-nU-NcL" secondAttribute="bottom" constant="16" id="hP6-VD-Bhm"/>
+                    <constraint firstItem="wSR-6d-R5j" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="j3K-QM-BO1"/>
                     <constraint firstItem="0gQ-pk-CXT" firstAttribute="leading" secondItem="Ipy-vI-EMY" secondAttribute="leading" id="lMh-lD-z6B"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="iqR-Gh-iyb" secondAttribute="bottom" constant="25" id="mu7-qf-50J"/>
                     <constraint firstItem="ctB-Fz-GZc" firstAttribute="top" secondItem="0gQ-pk-CXT" secondAttribute="bottom" constant="16" id="oCS-wC-IqV"/>
                     <constraint firstItem="0gQ-pk-CXT" firstAttribute="top" secondItem="Ipy-vI-EMY" secondAttribute="bottom" constant="16" id="p6d-8e-Jgf"/>
+                    <constraint firstItem="iqR-Gh-iyb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="qsL-aA-UGg"/>
                     <constraint firstItem="ctB-Fz-GZc" firstAttribute="leading" secondItem="Ipy-vI-EMY" secondAttribute="leading" id="rkY-iq-KEW"/>
                     <constraint firstItem="0gQ-pk-CXT" firstAttribute="trailing" secondItem="Ipy-vI-EMY" secondAttribute="trailing" id="ut4-jy-veJ"/>
                     <constraint firstItem="VCV-80-LX9" firstAttribute="leading" secondItem="dUf-OJ-yC0" secondAttribute="leading" id="wAa-iP-QOx"/>
@@ -116,10 +228,12 @@
                 <outlet property="nameLabel" destination="30z-nU-NcL" id="bG2-70-YlN"/>
                 <outlet property="priceLabel" destination="jPw-DQ-imh" id="66h-IU-PH7"/>
             </connections>
-            <point key="canvasLocation" x="314.49275362318843" y="248.10267857142856"/>
+            <point key="canvasLocation" x="314.49275362318843" y="315.06696428571428"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="ic_delete" width="48" height="48"/>
+        <image name="ic_deliver" width="50" height="50"/>
         <image name="ic_tag" width="120" height="120"/>
     </resources>
 </document>

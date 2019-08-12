@@ -209,8 +209,8 @@ extension RegisterViewController {
         config.hidesStatusBar = true
         config.hidesBottomBar = false
         config.preferredStatusBarStyle = UIStatusBarStyle.default
-        config.bottomMenuItemSelectedColour = UIColor.hexColor(with: "dd7663")
-        config.bottomMenuItemUnSelectedColour = UIColor.hexColor(with: "454545")
+        config.bottomMenuItemSelectedColour = .lightRoss()
+        config.bottomMenuItemUnSelectedColour = .cottonBlack()
         
         config.library.options = nil
         config.library.onlySquare = false
@@ -222,25 +222,7 @@ extension RegisterViewController {
         config.library.spacingBetweenItems = 1.0
         config.library.skipSelectionsGallery = false
         
-        //navigation bar
-        let attributes = [
-            NSAttributedString.Key.font : UIFont.systemFont(ofSize: 22, weight: .medium),
-            NSAttributedString.Key.foregroundColor: UIColor.white
-        ]
-        UINavigationBar.appearance().titleTextAttributes = attributes // Title fonts
-        
-        UINavigationBar.appearance().tintColor = .white // Left. bar buttons
-        config.colors.tintColor = .white // Right bar buttons (actions)
-        
-        //bar background
-        let coloredImage = UIColor.hexColor(with: "454545").image()
-        UINavigationBar.appearance().setBackgroundImage(coloredImage, for: UIBarMetrics.default)
-        
-        
-        let barButtonAttributes = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15, weight: .regular)]
-        UIBarButtonItem.appearance().setTitleTextAttributes(barButtonAttributes, for: .normal) // Bar Button fonts
-        
-        UITabBar.appearance().backgroundColor = UIColor.hexColor(with: "454545")
+        config.colors.tintColor = .cottonBlack() // Right bar buttons (actions)
         
         YPImagePickerConfiguration.shared = config
         

@@ -72,7 +72,7 @@ class ProductHomeViewController: BaseDropMenuViewController {
         self.view.endEditing(true)
         guard let vc = self.createViewControllerFromStoryboard(name: Config.Storyboard.product, identifier: Config.Controller.Product.edit) as? ProductEditViewController else { return }
         vc.type = .add
-        vc.product = Product(name: "", surname: "", avatar: nil, photoURL: "", availableCount: 0, color: "", description: "", price: "0")
+        vc.product = Product(id: UUID().uuidString, name: "", surname: "", avatar: nil, photoURL: "", availableCount: 0, color: "", description: "", price: "0")
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		940433F822FEAC9B00C9D4A7 /* Popup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 940433F722FEAC9B00C9D4A7 /* Popup.storyboard */; };
+		940433FA22FEACD100C9D4A7 /* DeliverPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940433F922FEACD100C9D4A7 /* DeliverPopViewController.swift */; };
+		940433FC22FEB5EF00C9D4A7 /* Deliver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940433FB22FEB5EF00C9D4A7 /* Deliver.swift */; };
 		9408793E22E887DC00B39B91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9408793D22E887DC00B39B91 /* AppDelegate.swift */; };
 		9408794022E887DC00B39B91 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9408793F22E887DC00B39B91 /* LandingViewController.swift */; };
 		9408794322E887DC00B39B91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9408794122E887DC00B39B91 /* Main.storyboard */; };
@@ -39,6 +42,7 @@
 		9462A32322F853CB00C3D5E4 /* ActivityParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9462A32222F853CB00C3D5E4 /* ActivityParser.swift */; };
 		9462A32522F8646A00C3D5E4 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9462A32422F8646A00C3D5E4 /* CurrentUser.swift */; };
 		9462A32722F933E900C3D5E4 /* ActivityChangedContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9462A32622F933E900C3D5E4 /* ActivityChangedContent.swift */; };
+		9462A32922FABD2800C3D5E4 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9462A32822FABD2800C3D5E4 /* ErrorMessage.swift */; };
 		9469B15422EED96500A0756D /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9469B15222EED96500A0756D /* ProductDetailViewController.swift */; };
 		9469B15C22EEEDD600A0756D /* ProductDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9469B15A22EEEDD600A0756D /* ProductDetailTableViewCell.swift */; };
 		9469B15D22EEEDD600A0756D /* ProductDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9469B15B22EEEDD600A0756D /* ProductDetailTableViewCell.xib */; };
@@ -61,6 +65,9 @@
 /* Begin PBXFileReference section */
 		4566DC45E1813E372B0C649D /* Pods-ShopSide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopSide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShopSide/Pods-ShopSide.debug.xcconfig"; sourceTree = "<group>"; };
 		4F8C8CE1EFFF22A7547F502A /* Pods-ShopSide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopSide.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShopSide/Pods-ShopSide.release.xcconfig"; sourceTree = "<group>"; };
+		940433F722FEAC9B00C9D4A7 /* Popup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Popup.storyboard; sourceTree = "<group>"; };
+		940433F922FEACD100C9D4A7 /* DeliverPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliverPopViewController.swift; sourceTree = "<group>"; };
+		940433FB22FEB5EF00C9D4A7 /* Deliver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deliver.swift; sourceTree = "<group>"; };
 		9408793A22E887DC00B39B91 /* ShopSide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopSide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9408793D22E887DC00B39B91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9408793F22E887DC00B39B91 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +103,7 @@
 		9462A32222F853CB00C3D5E4 /* ActivityParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityParser.swift; sourceTree = "<group>"; };
 		9462A32422F8646A00C3D5E4 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		9462A32622F933E900C3D5E4 /* ActivityChangedContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityChangedContent.swift; sourceTree = "<group>"; };
+		9462A32822FABD2800C3D5E4 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		9469B15222EED96500A0756D /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		9469B15A22EEEDD600A0756D /* ProductDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailTableViewCell.swift; sourceTree = "<group>"; };
 		9469B15B22EEEDD600A0756D /* ProductDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailTableViewCell.xib; sourceTree = "<group>"; };
@@ -133,6 +141,23 @@
 				E444F2E5143F0363D1DFAAB8 /* Pods_ShopSide.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		940433F522FEAB6C00C9D4A7 /* pop */ = {
+			isa = PBXGroup;
+			children = (
+				940433F922FEACD100C9D4A7 /* DeliverPopViewController.swift */,
+				940433F722FEAC9B00C9D4A7 /* Popup.storyboard */,
+			);
+			path = pop;
+			sourceTree = "<group>";
+		};
+		940433F622FEAB8100C9D4A7 /* component */ = {
+			isa = PBXGroup;
+			children = (
+				940433F522FEAB6C00C9D4A7 /* pop */,
+			);
+			path = component;
 			sourceTree = "<group>";
 		};
 		9408793122E887DC00B39B91 = {
@@ -183,6 +208,7 @@
 				94D1F76C22F19D11009FC676 /* login */,
 				9408798222E9E5FB00B39B91 /* product */,
 				9462A31A22F82A2300C3D5E4 /* activity */,
+				940433F622FEAB8100C9D4A7 /* component */,
 			);
 			path = vc;
 			sourceTree = "<group>";
@@ -214,6 +240,8 @@
 				9408796222E9B0C100B39B91 /* Product.swift */,
 				9462A31822F8100E00C3D5E4 /* Activity.swift */,
 				9462A32622F933E900C3D5E4 /* ActivityChangedContent.swift */,
+				9462A32822FABD2800C3D5E4 /* ErrorMessage.swift */,
+				940433FB22FEB5EF00C9D4A7 /* Deliver.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -400,6 +428,7 @@
 				9408796822E9B1C700B39B91 /* ProductCollectionViewCell.xib in Resources */,
 				9408794522E887DD00B39B91 /* Assets.xcassets in Resources */,
 				9462A31C22F82A5200C3D5E4 /* Activity.storyboard in Resources */,
+				940433F822FEAC9B00C9D4A7 /* Popup.storyboard in Resources */,
 				9408795D22E9897200B39B91 /* Menu.storyboard in Resources */,
 				94D1F76522F19CCA009FC676 /* Login.storyboard in Resources */,
 				9408797622E9C99F00B39B91 /* Product.storyboard in Resources */,
@@ -425,6 +454,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-ShopSide/Pods-ShopSide-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BTNavigationDropdownMenu/BTNavigationDropdownMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/DisplaySwitcher/DisplaySwitcher.framework",
+				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
 				"${BUILT_PRODUCTS_DIR}/GMStepper/GMStepper.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
@@ -433,6 +463,7 @@
 				"${BUILT_PRODUCTS_DIR}/LGButton/LGButton.framework",
 				"${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/PryntTrimmerView/PryntTrimmerView.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -447,6 +478,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BTNavigationDropdownMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DisplaySwitcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GMStepper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
@@ -455,6 +487,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTMorphingLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PryntTrimmerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -509,6 +542,7 @@
 				9469B16122EF1C1E00A0756D /* BaseViewController.swift in Sources */,
 				9408795922E8986700B39B91 /* BaseDropMenuViewController.swift in Sources */,
 				9462A32522F8646A00C3D5E4 /* CurrentUser.swift in Sources */,
+				940433FA22FEACD100C9D4A7 /* DeliverPopViewController.swift in Sources */,
 				9408795B22E9895500B39B91 /* ProductHomeViewController.swift in Sources */,
 				9469B16422F032CE00A0756D /* ProductEditTableViewCell.swift in Sources */,
 				9408794022E887DC00B39B91 /* LandingViewController.swift in Sources */,
@@ -519,12 +553,14 @@
 				9408796022E99D4000B39B91 /* Config.swift in Sources */,
 				94D1F76B22F19D09009FC676 /* RegisterViewController.swift in Sources */,
 				94D1F76E22F19D74009FC676 /* LoadingIndicator.swift in Sources */,
+				940433FC22FEB5EF00C9D4A7 /* Deliver.swift in Sources */,
 				9408797122E9B27B00B39B91 /* DataLoader.swift in Sources */,
 				9408793E22E887DC00B39B91 /* AppDelegate.swift in Sources */,
 				9469B16722F03FD700A0756D /* ShadowImageView.swift in Sources */,
 				9408795222E8904D00B39B91 /* MenuViewController.swift in Sources */,
 				9469B15F22EF04C300A0756D /* ProductEditViewController.swift in Sources */,
 				9469B15422EED96500A0756D /* ProductDetailViewController.swift in Sources */,
+				9462A32922FABD2800C3D5E4 /* ErrorMessage.swift in Sources */,
 				9462A31922F8100E00C3D5E4 /* Activity.swift in Sources */,
 				9408796922E9B1C700B39B91 /* ProductCollectionViewCell.swift in Sources */,
 				9408797222E9B27B00B39B91 /* UIColor+.swift in Sources */,

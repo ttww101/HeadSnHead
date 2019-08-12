@@ -20,7 +20,12 @@ class ProductEditViewController: BaseViewController {
     var didUpdateClosure: ((Product?)->())? = nil
     let loadingIndicator = LoadingIndicator()
     @IBOutlet weak var tableView: UITableView!
-    var product: Product? = nil
+    var product: Product? = nil {
+        didSet {
+            self.activityChangedContent.product = self.product
+        }
+    }
+    
     var type: ProductEditType = .edit {
         didSet {
             switch self.type {
@@ -62,6 +67,7 @@ extension ProductEditViewController: UITableViewDelegate, UITableViewDataSource 
                         closure(self.product)
                     }
                     
+                    //save update activity
                     var activityType: ActivityType = .create
                     var content = ""
                     switch self.type {
@@ -72,12 +78,14 @@ extension ProductEditViewController: UITableViewDelegate, UITableViewDataSource 
                         activityType = .update
                         content = self.activityChangedContent.createString()
                     }
+                    //no update message
+                    if content == "" { return }
                     let title = "\(activityType)"
                     
                     let owner = CurrentUser.user.name
                     
                     let formatter = DateFormatter()
-                    formatter.dateFormat = "yyyy/MM/dd HH:mm"
+                    formatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
                     formatter.locale = Locale.current
                     let currentTime = formatter.string(from: Date())
                         
@@ -111,7 +119,7 @@ extension ProductEditViewController: UITableViewDelegate, UITableViewDataSource 
             if let product = product {
                 cell.product = product
             } else {
-                cell.product = Product(name: "", surname: "", avatar: nil, photoURL: "", availableCount: 0, color: "", price: "0")
+                cell.product = Product(id: UUID().uuidString, name: "", surname: "", avatar: nil, photoURL: "", availableCount: 0, color: "", price: "0")
             }
             cell.okButton.titleString = self.okButtonTitleText
             
@@ -134,30 +142,20 @@ extension ProductEditViewController {
         let ref = Database.database().reference().child(Config.Firebase.Product.nodeName)
         
         var value: [String: Any] = [:]
+        
         let id: String = self.product?.id ?? UUID().uuidString
+        self.product?.id = id
+        self.product?.photoURL = Config.Firebase.Storage.productPhoto + "/" + Config.Firebase.Storage.productPhoto + "_" + id
+        
         if let product = self.product {
-            value.updateValue(id, forKey: Config.Firebase.Product.Keys.productID)
-            value.updateValue(product.name, forKey: Config.Firebase.Product.Keys.name)
-            value.updateValue(product.surname, forKey: Config.Firebase.Product.Keys.surname)
-            value.updateValue(Auth.auth().currentUser?.uid ?? "Unknown User (May Not Login)", forKey: Config.Firebase.Product.Keys.owner)
-            value.updateValue(product.color, forKey: Config.Firebase.Product.Keys.color)
-            value.updateValue(product.description, forKey: Config.Firebase.Product.Keys.description)
-            value.updateValue(product.availableCount, forKey: Config.Firebase.Product.Keys.availableCount)
-            value.updateValue(product.price, forKey: Config.Firebase.Product.Keys.price)
-            value.updateValue(Config.Firebase.Storage.productPhoto + "/" + Config.Firebase.Storage.productPhoto + "_" + id, forKey: Config.Firebase.Product.Keys.photoURL)
-            value.updateValue(Config.Firebase.Storage.productPhoto + "/" + Config.Firebase.Storage.productPhoto + "_" + id, forKey: Config.Firebase.Product.Keys.photoURL)
+            value = product.createValue()
         } else {
             self.showErrorAlert(error: nil, myErrorMsg: "此商品更新失敗") {
-                if let completion = completion {
-                    completion()
-                }
             }
             return
         }
         
-        self.loadingIndicator.start()
-        
-        ref.child(id).updateChildValues(value, withCompletionBlock: { (err, _) in
+        FirebaseManager.shared.updateData(value: value, ref: ref, childID: id) { err in
             
             self.loadingIndicator.stop()
             
@@ -169,8 +167,7 @@ extension ProductEditViewController {
                     completion()
                 }
             }
-            
-        })
+        }
         
         //product photo
         let storageRef = Storage.storage().reference()
@@ -188,8 +185,6 @@ extension ProductEditViewController {
                 self.showErrorAlert(error: error, myErrorMsg: nil)
                 return
             }
-            
-//            let userPhotoURL = metadata?.path
         })
 
     }

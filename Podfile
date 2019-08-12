@@ -21,6 +21,7 @@ target 'ShopSide' do
   pod 'IQKeyboardManagerSwift'
   pod 'NVActivityIndicatorView'
   pod 'SnapKit'
+  pod 'PopupDialog'
  
   #Custom
   pod 'GuillotineMenu'

@@ -125,6 +125,7 @@ content</string>
                 <outlet property="productImageView" destination="PaN-mM-FXI" id="TLa-hA-0ID"/>
                 <outlet property="timeLabel" destination="AuK-ny-NkQ" id="wUW-UN-qhu"/>
                 <outlet property="titleLabel" destination="65I-bk-PyK" id="eTb-e5-7QT"/>
+                <outlet property="titleSeperatorView" destination="0FW-Qt-dBv" id="VSn-68-3dw"/>
             </connections>
             <point key="canvasLocation" x="185.50724637681162" y="179.46428571428569"/>
         </tableViewCell>

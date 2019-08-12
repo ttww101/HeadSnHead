@@ -16,14 +16,17 @@ class ActivityChangedContent {
     var isPhoto = false
     var isDescription = false
     
+    var product: Product?
+    
     func createString() -> String {
+        guard let product = product else { return "" }
         var str = ""
-        str.append(isName ? "- name\n" : "")
-        str.append(isCount ? "- count\n" : "")
-        str.append(isColor ? "- color\n" : "")
-        str.append(isPrice ? "- price\n" : "")
-        str.append(isPhoto ? "- photo\n" : "")
-        str.append(isDescription ? "- description\n" : "")
+        str.append(isName ? "name: \(product.name)\n" : "")
+        str.append(isCount ? "count: \(product.availableCount) \n" : "")
+        str.append(isColor ? "color: \(product.color)\n" : "")
+        str.append(isPrice ? "price: \(product.price)" : "")
+        str.append(isPhoto ? "photo\n" : "")
+        str.append(isDescription ? "description: \(product.description)" : "")
         return str
     }
 }

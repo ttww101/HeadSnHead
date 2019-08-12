@@ -21,6 +21,7 @@ struct Config {
         static let product = "Product"
         static let login = "Login"
         static let activity = "Activity"
+        static let popup = "Popup"
     }
     
     struct Controller {
@@ -42,6 +43,10 @@ struct Config {
         
         struct Activity {
             static let nav = "ActivityNavigationController"
+        }
+        
+        struct Popup {
+            static let deliver = "DeliverPopViewController"
         }
     }
     
@@ -88,6 +93,16 @@ struct Config {
                 static let color = "Color"
                 static let description = "Description"
                 static let price = "Price"
+            }
+        }
+        
+        struct Delivers {
+            static let nodeName = "Delivers_of_\(Config.AppAssociateName)"
+            struct Keys {
+                static let state = "State"
+                static let productID = "ProductID"
+                static let address = "Address"
+                static let orderCount = "OrderCount"
             }
         }
         

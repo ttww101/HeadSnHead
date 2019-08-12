@@ -1,6 +1,7 @@
 PODS:
   - BTNavigationDropdownMenu (0.5)
   - DisplaySwitcher (1.0.1)
+  - DynamicBlurView (3.0.1)
   - Firebase/Auth (6.3.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 6.1.2)
@@ -90,6 +91,8 @@ PODS:
   - NVActivityIndicatorView (4.7.0):
     - NVActivityIndicatorView/Presenter (= 4.7.0)
   - NVActivityIndicatorView/Presenter (4.7.0)
+  - PopupDialog (1.1.0):
+    - DynamicBlurView (~> 3.0.1)
   - PryntTrimmerView (3.0.0)
   - SkyFloatingLabelTextField (3.7.0)
   - SnapKit (5.0.0)
@@ -113,6 +116,7 @@ DEPENDENCIES:
   - LGButton
   - LTMorphingLabel
   - NVActivityIndicatorView
+  - PopupDialog
   - SkyFloatingLabelTextField
   - SnapKit
   - YPImagePicker
@@ -121,6 +125,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - BTNavigationDropdownMenu
     - DisplaySwitcher
+    - DynamicBlurView
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -143,6 +148,7 @@ SPEC REPOS:
     - LTMorphingLabel
     - nanopb
     - NVActivityIndicatorView
+    - PopupDialog
     - PryntTrimmerView
     - SkyFloatingLabelTextField
     - SnapKit
@@ -152,6 +158,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   BTNavigationDropdownMenu: ba3a26fdb6a56c4721c31df8a0875106c259663a
   DisplaySwitcher: 5f725284c28cdf22ea7ba2eee8e8f7e7cb9cdf87
+  DynamicBlurView: b1df5415f9bd31897549e5d7077e5ec120a4d636
   Firebase: 8432d732974498afd5987e9001a05f90f1a3d625
   FirebaseAnalytics: 470ddab7253b21ad5a40bebd4a9903d7ae19386a
   FirebaseAuth: 7fa2cc010b93770831a4e7a60651b52c3b8d111a
@@ -174,12 +181,13 @@ SPEC CHECKSUMS:
   LTMorphingLabel: 22147fb1ec2b0306537ccc348b36ea8617179b03
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
+  PopupDialog: 42fb7a0bc4fafdf89fef8b5b2b127a6023f3e1cc
   PryntTrimmerView: 53ac64053c7ce63cb3e27f54090f52da0734891d
   SkyFloatingLabelTextField: 4b46db0ab1ccde0919cded29c656e6b4805eda04
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
   SteviaLayout: 523469269059f2c6da02820bb2ff28a5fe0780aa
   YPImagePicker: 8039f89ad79281545fa868486f32d9bf5d65ede1
 
-PODFILE CHECKSUM: 3e7ff5ff126535f3ed03c8fdc125edcebf032cdf
+PODFILE CHECKSUM: 6d2b7a4f57e70b13875728ff78a4e65e09f14853
 
 COCOAPODS: 1.5.3

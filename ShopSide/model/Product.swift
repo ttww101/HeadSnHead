@@ -1,5 +1,5 @@
 //
-//  Product.swift
+//  self.swift
 //  ShopSide
 //
 //  Created by Wu on 2019/7/25.
@@ -13,7 +13,7 @@ class Product {
     
     var productDidChangedImage: ((UIImage?)->())? = nil
     
-    var id: String?
+    var id: String
     var name: String
     var surname: String
     var avatar: UIImage? {
@@ -30,7 +30,7 @@ class Product {
     var price: String
     var photoURL: String
     
-    init(id: String? = nil, name: String, surname: String, avatar: UIImage?, photoURL: String , availableCount: Int, color: String, description: String = "", owner: String = "", price: String) {
+    init(id: String, name: String, surname: String, avatar: UIImage?, photoURL: String , availableCount: Int, color: String, description: String = "", owner: String = "", price: String) {
         self.id = id
         self.name = name
         self.surname = surname
@@ -43,5 +43,21 @@ class Product {
         self.price = price
     }
     
+    func createValue() -> Dictionary<String, Any> {
+        
+        var value: [String: Any] = [:]
+        
+        value.updateValue(self.id, forKey: Config.Firebase.Product.Keys.productID)
+        value.updateValue(self.name, forKey: Config.Firebase.Product.Keys.name)
+        value.updateValue(self.surname, forKey: Config.Firebase.Product.Keys.surname)
+        value.updateValue(Auth.auth().currentUser?.uid ?? "Unknown User (May Not Login)", forKey: Config.Firebase.Product.Keys.owner)
+        value.updateValue(self.color, forKey: Config.Firebase.Product.Keys.color)
+        value.updateValue(self.description, forKey: Config.Firebase.Product.Keys.description)
+        value.updateValue(self.availableCount, forKey: Config.Firebase.Product.Keys.availableCount)
+        value.updateValue(self.price, forKey: Config.Firebase.Product.Keys.price)
+        value.updateValue(self.photoURL, forKey: Config.Firebase.Product.Keys.photoURL)
+        
+        return value
+    }
     
 }

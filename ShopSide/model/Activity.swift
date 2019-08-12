@@ -8,17 +8,22 @@
 
 import UIKit
 
-enum ActivityType: String {
+enum ActivityType: String, CaseIterable {
+    
     case create = "Create"
     case update = "Update"
+    case delete = "Delete"
+    
+    static let allRawValues = [create.rawValue, update.rawValue, delete.rawValue]
 }
 
 class Activity {
     var type: ActivityType
     
     var owner: String
-    private var _ownerImage: UIImage?
     var didDownloadFinishedOwnerImage: ((UIImage?)->())?
+    
+    private var _ownerImage: UIImage?
     var ownerImage: UIImage? {
         set {
             _ownerImage = newValue
@@ -35,6 +40,7 @@ class Activity {
             return _ownerImage
         }
     }
+    
     var ownerPhotoURL: String
     var activityID: String
     var title: String
