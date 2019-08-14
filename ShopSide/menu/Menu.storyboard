@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,14 +19,14 @@
                         <viewControllerLayoutGuide type="bottom" id="chD-2k-UdG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NOv-U4-cd8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ul-vX-wh0">
-                                <rect key="frame" x="0.0" y="357" width="414" height="182"/>
+                                <rect key="frame" x="0.0" y="192.5" width="375" height="282"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tc7-yw-26u">
-                                        <rect key="frame" x="0.0" y="16" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="16" width="375" height="50"/>
                                         <accessibility key="accessibilityConfiguration" label="PROFILE"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="dJj-44-B8Z"/>
@@ -34,7 +34,7 @@
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="PRODUCT" image="ic_profile">
+                                        <state key="normal" title="PRODUCT" image="ic_menu_product">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -43,12 +43,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abp-Fa-JaT">
-                                        <rect key="frame" x="0.0" y="66" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="66" width="375" height="50"/>
                                         <accessibility key="accessibilityConfiguration" label="ACTIVITY"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="ACTIVITY" image="ic_activity">
+                                        <state key="normal" title="ACTIVITY" image="ic_menu_activity">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -57,12 +57,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TM6-fl-90K">
-                                        <rect key="frame" x="0.0" y="116" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="116" width="375" height="50"/>
                                         <accessibility key="accessibilityConfiguration" label="SETTINGS"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="SETTINGS" image="ic_settings">
+                                        <state key="normal" title="DELIVERS" image="ic_menu_deliver">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -70,25 +70,60 @@
                                             <action selector="menuButtonTapped:" destination="Y8X-x2-FHt" eventType="touchUpInside" id="gja-jx-XIG"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHY-wl-UYH">
+                                        <rect key="frame" x="0.0" y="166" width="375" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" label="SETTINGS"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="SETTINGS" image="ic_menu_setting">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="menuButtonTapped:" destination="Y8X-x2-FHt" eventType="touchUpInside" id="alz-w6-FwM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOU-hU-jdC">
+                                        <rect key="frame" x="0.0" y="216" width="375" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" label="SETTINGS"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="RATE" image="ic_menu_starrate">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="menuButtonTapped:" destination="Y8X-x2-FHt" eventType="touchUpInside" id="633-W4-jfb"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="abp-Fa-JaT" firstAttribute="centerX" secondItem="tc7-yw-26u" secondAttribute="centerX" id="1Mr-4b-S4r"/>
+                                    <constraint firstItem="bHY-wl-UYH" firstAttribute="height" secondItem="TM6-fl-90K" secondAttribute="height" id="3RZ-pU-thj"/>
+                                    <constraint firstItem="fOU-hU-jdC" firstAttribute="leading" secondItem="bHY-wl-UYH" secondAttribute="leading" id="4XD-k4-kEp"/>
                                     <constraint firstItem="TM6-fl-90K" firstAttribute="top" secondItem="abp-Fa-JaT" secondAttribute="bottom" id="5jF-Hp-xgS"/>
+                                    <constraint firstItem="bHY-wl-UYH" firstAttribute="top" secondItem="TM6-fl-90K" secondAttribute="bottom" id="6yP-5t-HBn"/>
                                     <constraint firstItem="abp-Fa-JaT" firstAttribute="top" secondItem="tc7-yw-26u" secondAttribute="bottom" id="8BD-sx-tjR"/>
                                     <constraint firstItem="TM6-fl-90K" firstAttribute="height" secondItem="abp-Fa-JaT" secondAttribute="height" id="BJc-Kb-NuH"/>
-                                    <constraint firstAttribute="bottom" secondItem="TM6-fl-90K" secondAttribute="bottom" constant="16" id="JNR-Al-MhK"/>
+                                    <constraint firstAttribute="bottom" secondItem="fOU-hU-jdC" secondAttribute="bottom" constant="16" id="FJ1-Uc-pIZ"/>
+                                    <constraint firstItem="fOU-hU-jdC" firstAttribute="top" secondItem="bHY-wl-UYH" secondAttribute="bottom" id="JaA-FD-P2f"/>
                                     <constraint firstItem="abp-Fa-JaT" firstAttribute="height" secondItem="tc7-yw-26u" secondAttribute="height" id="L9T-IQ-Ebc"/>
                                     <constraint firstItem="TM6-fl-90K" firstAttribute="centerX" secondItem="abp-Fa-JaT" secondAttribute="centerX" id="Lzz-Xf-Znz"/>
                                     <constraint firstItem="tc7-yw-26u" firstAttribute="top" secondItem="6Ul-vX-wh0" secondAttribute="top" constant="16" id="Pfb-Mb-UYt"/>
                                     <constraint firstAttribute="trailing" secondItem="tc7-yw-26u" secondAttribute="trailing" id="Q4U-lS-rgQ"/>
+                                    <constraint firstItem="fOU-hU-jdC" firstAttribute="trailing" secondItem="bHY-wl-UYH" secondAttribute="trailing" id="bCc-n4-GAr"/>
                                     <constraint firstItem="abp-Fa-JaT" firstAttribute="width" secondItem="tc7-yw-26u" secondAttribute="width" id="gpp-Xa-5XI"/>
+                                    <constraint firstItem="bHY-wl-UYH" firstAttribute="width" secondItem="TM6-fl-90K" secondAttribute="width" id="nNa-Ge-CE1"/>
+                                    <constraint firstItem="bHY-wl-UYH" firstAttribute="centerX" secondItem="TM6-fl-90K" secondAttribute="centerX" id="nhK-7R-zHJ"/>
                                     <constraint firstItem="TM6-fl-90K" firstAttribute="width" secondItem="abp-Fa-JaT" secondAttribute="width" id="oyj-Dt-okb"/>
                                     <constraint firstItem="tc7-yw-26u" firstAttribute="leading" secondItem="6Ul-vX-wh0" secondAttribute="leading" id="uZS-tS-wcJ"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cim-Wi-dce">
-                                <rect key="frame" x="15" y="589" width="384" height="50"/>
+                                <rect key="frame" x="0.0" y="529.5" width="375" height="50"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="LOG OUT">
                                     <color key="titleColor" red="1" green="0.38246004099999997" blue="0.38966461450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -103,29 +138,33 @@
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="6Ul-vX-wh0" secondAttribute="centerX" id="3eP-zf-9lJ"/>
                             <constraint firstItem="cim-Wi-dce" firstAttribute="height" secondItem="tc7-yw-26u" secondAttribute="height" id="LLV-V1-WGb"/>
-                            <constraint firstItem="cim-Wi-dce" firstAttribute="top" secondItem="TM6-fl-90K" secondAttribute="bottom" constant="66" id="NC1-EF-Bhg"/>
                             <constraint firstAttribute="centerY" secondItem="6Ul-vX-wh0" secondAttribute="centerY" id="Nd3-Ja-1fY"/>
                             <constraint firstItem="cim-Wi-dce" firstAttribute="centerX" secondItem="qef-V8-4eb" secondAttribute="centerX" id="YeM-uc-D42"/>
                             <constraint firstItem="tc7-yw-26u" firstAttribute="width" secondItem="NOv-U4-cd8" secondAttribute="width" id="eS4-S0-9ph"/>
-                            <constraint firstItem="cim-Wi-dce" firstAttribute="width" secondItem="tc7-yw-26u" secondAttribute="width" constant="-30" id="fr5-qF-9wZ"/>
+                            <constraint firstItem="cim-Wi-dce" firstAttribute="width" secondItem="tc7-yw-26u" secondAttribute="width" id="fr5-qF-9wZ"/>
+                            <constraint firstItem="cim-Wi-dce" firstAttribute="top" secondItem="6Ul-vX-wh0" secondAttribute="bottom" constant="55" id="laT-iO-KsX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qef-V8-4eb"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="menuFifthButton" destination="fOU-hU-jdC" id="1fX-wu-gdk"/>
                         <outlet property="menuFirstButton" destination="tc7-yw-26u" id="DJF-cu-hw4"/>
+                        <outlet property="menuFourthButton" destination="bHY-wl-UYH" id="xmf-sa-TyU"/>
                         <outlet property="menuSecondButton" destination="abp-Fa-JaT" id="hby-Yg-LSV"/>
-                        <outlet property="menuThirdButton" destination="TM6-fl-90K" id="qe1-I8-LQf"/>
+                        <outlet property="menuThirdButton" destination="TM6-fl-90K" id="Mgk-zK-5mt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0kQ-5f-cqM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2533.3333333333335" y="47.544642857142854"/>
+            <point key="canvasLocation" x="-2533.5999999999999" y="47.226386806596707"/>
         </scene>
     </scenes>
     <resources>
-        <image name="ic_activity" width="25" height="19"/>
-        <image name="ic_profile" width="17" height="24"/>
-        <image name="ic_settings" width="23" height="23"/>
+        <image name="ic_menu_activity" width="48" height="48"/>
+        <image name="ic_menu_deliver" width="48" height="48"/>
+        <image name="ic_menu_product" width="48" height="48"/>
+        <image name="ic_menu_setting" width="45" height="45"/>
+        <image name="ic_menu_starrate" width="50" height="50"/>
     </resources>
 </document>

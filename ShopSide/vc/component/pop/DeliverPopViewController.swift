@@ -13,7 +13,7 @@ import GMStepper
 class DeliverPopViewController: BaseViewController {
 
     var productImage: UIImage?
-    var deliver: Deliver = Deliver(productID: "", count: 0, address: "")
+    var deliver: Deliver = Deliver(productID: "", count: 0, address: "", createTime: "")
     @IBOutlet weak var stepper: GMStepper!
     
     @IBOutlet weak var deliverAddressTextfield: SkyFloatingLabelTextField!

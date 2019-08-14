@@ -10,6 +10,13 @@
 		940433F822FEAC9B00C9D4A7 /* Popup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 940433F722FEAC9B00C9D4A7 /* Popup.storyboard */; };
 		940433FA22FEACD100C9D4A7 /* DeliverPopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940433F922FEACD100C9D4A7 /* DeliverPopViewController.swift */; };
 		940433FC22FEB5EF00C9D4A7 /* Deliver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940433FB22FEB5EF00C9D4A7 /* Deliver.swift */; };
+		940433FF2301720D00C9D4A7 /* Deliver.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 940433FE2301720D00C9D4A7 /* Deliver.storyboard */; };
+		940434012301722700C9D4A7 /* DeliverHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940434002301722700C9D4A7 /* DeliverHomeViewController.swift */; };
+		940434042301737B00C9D4A7 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 940434032301737B00C9D4A7 /* Setting.storyboard */; };
+		94043406230173AC00C9D4A7 /* SettingHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94043405230173AC00C9D4A7 /* SettingHomeViewController.swift */; };
+		9404340C230177EB00C9D4A7 /* DeliverHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404340A230177EB00C9D4A7 /* DeliverHomeTableViewCell.swift */; };
+		9404340D230177EB00C9D4A7 /* DeliverHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9404340B230177EB00C9D4A7 /* DeliverHomeTableViewCell.xib */; };
+		9404340F2301791A00C9D4A7 /* DeliverParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404340E2301791A00C9D4A7 /* DeliverParser.swift */; };
 		9408793E22E887DC00B39B91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9408793D22E887DC00B39B91 /* AppDelegate.swift */; };
 		9408794022E887DC00B39B91 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9408793F22E887DC00B39B91 /* LandingViewController.swift */; };
 		9408794322E887DC00B39B91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9408794122E887DC00B39B91 /* Main.storyboard */; };
@@ -68,6 +75,13 @@
 		940433F722FEAC9B00C9D4A7 /* Popup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Popup.storyboard; sourceTree = "<group>"; };
 		940433F922FEACD100C9D4A7 /* DeliverPopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliverPopViewController.swift; sourceTree = "<group>"; };
 		940433FB22FEB5EF00C9D4A7 /* Deliver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deliver.swift; sourceTree = "<group>"; };
+		940433FE2301720D00C9D4A7 /* Deliver.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Deliver.storyboard; sourceTree = "<group>"; };
+		940434002301722700C9D4A7 /* DeliverHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliverHomeViewController.swift; sourceTree = "<group>"; };
+		940434032301737B00C9D4A7 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		94043405230173AC00C9D4A7 /* SettingHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingHomeViewController.swift; sourceTree = "<group>"; };
+		9404340A230177EB00C9D4A7 /* DeliverHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliverHomeTableViewCell.swift; sourceTree = "<group>"; };
+		9404340B230177EB00C9D4A7 /* DeliverHomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliverHomeTableViewCell.xib; sourceTree = "<group>"; };
+		9404340E2301791A00C9D4A7 /* DeliverParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliverParser.swift; sourceTree = "<group>"; };
 		9408793A22E887DC00B39B91 /* ShopSide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopSide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9408793D22E887DC00B39B91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9408793F22E887DC00B39B91 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +174,33 @@
 			path = component;
 			sourceTree = "<group>";
 		};
+		940433FD230171EE00C9D4A7 /* deliver */ = {
+			isa = PBXGroup;
+			children = (
+				940434002301722700C9D4A7 /* DeliverHomeViewController.swift */,
+				940433FE2301720D00C9D4A7 /* Deliver.storyboard */,
+			);
+			path = deliver;
+			sourceTree = "<group>";
+		};
+		940434022301730800C9D4A7 /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				94043405230173AC00C9D4A7 /* SettingHomeViewController.swift */,
+				940434032301737B00C9D4A7 /* Setting.storyboard */,
+			);
+			path = setting;
+			sourceTree = "<group>";
+		};
+		94043407230177A400C9D4A7 /* Deliver */ = {
+			isa = PBXGroup;
+			children = (
+				9404340A230177EB00C9D4A7 /* DeliverHomeTableViewCell.swift */,
+				9404340B230177EB00C9D4A7 /* DeliverHomeTableViewCell.xib */,
+			);
+			path = Deliver;
+			sourceTree = "<group>";
+		};
 		9408793122E887DC00B39B91 = {
 			isa = PBXGroup;
 			children = (
@@ -207,7 +248,13 @@
 			children = (
 				94D1F76C22F19D11009FC676 /* login */,
 				9408798222E9E5FB00B39B91 /* product */,
+				9408795A22E9895500B39B91 /* ProductHomeViewController.swift */,
+				9469B15222EED96500A0756D /* ProductDetailViewController.swift */,
+				9469B15E22EF04C300A0756D /* ProductEditViewController.swift */,
+				9408797522E9C99F00B39B91 /* Product.storyboard */,
 				9462A31A22F82A2300C3D5E4 /* activity */,
+				940433FD230171EE00C9D4A7 /* deliver */,
+				940434022301730800C9D4A7 /* setting */,
 				940433F622FEAB8100C9D4A7 /* component */,
 			);
 			path = vc;
@@ -251,6 +298,7 @@
 			children = (
 				9469B15622EEED9500A0756D /* Product */,
 				9462A31D22F832B200C3D5E4 /* Activity */,
+				94043407230177A400C9D4A7 /* Deliver */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -284,10 +332,6 @@
 		9408798222E9E5FB00B39B91 /* product */ = {
 			isa = PBXGroup;
 			children = (
-				9408795A22E9895500B39B91 /* ProductHomeViewController.swift */,
-				9469B15222EED96500A0756D /* ProductDetailViewController.swift */,
-				9469B15E22EF04C300A0756D /* ProductEditViewController.swift */,
-				9408797522E9C99F00B39B91 /* Product.storyboard */,
 			);
 			path = product;
 			sourceTree = "<group>";
@@ -338,6 +382,7 @@
 			children = (
 				94DA6FBF22F31460000B0A6A /* ProductParser.swift */,
 				9462A32222F853CB00C3D5E4 /* ActivityParser.swift */,
+				9404340E2301791A00C9D4A7 /* DeliverParser.swift */,
 			);
 			path = parser;
 			sourceTree = "<group>";
@@ -419,6 +464,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9404340D230177EB00C9D4A7 /* DeliverHomeTableViewCell.xib in Resources */,
 				9408794822E887DD00B39B91 /* LaunchScreen.storyboard in Resources */,
 				9408797F22E9E30900B39B91 /* 4.jpg in Resources */,
 				9469B15D22EEEDD600A0756D /* ProductDetailTableViewCell.xib in Resources */,
@@ -426,12 +472,14 @@
 				9408797D22E9E30900B39B91 /* 1.jpg in Resources */,
 				9462A32122F832EE00C3D5E4 /* ActivityHomeTableViewCell.xib in Resources */,
 				9408796822E9B1C700B39B91 /* ProductCollectionViewCell.xib in Resources */,
+				940434042301737B00C9D4A7 /* Setting.storyboard in Resources */,
 				9408794522E887DD00B39B91 /* Assets.xcassets in Resources */,
 				9462A31C22F82A5200C3D5E4 /* Activity.storyboard in Resources */,
 				940433F822FEAC9B00C9D4A7 /* Popup.storyboard in Resources */,
 				9408795D22E9897200B39B91 /* Menu.storyboard in Resources */,
 				94D1F76522F19CCA009FC676 /* Login.storyboard in Resources */,
 				9408797622E9C99F00B39B91 /* Product.storyboard in Resources */,
+				940433FF2301720D00C9D4A7 /* Deliver.storyboard in Resources */,
 				9469B16522F032CE00A0756D /* ProductEditTableViewCell.xib in Resources */,
 				9408794322E887DC00B39B91 /* Main.storyboard in Resources */,
 				9408798022E9E30900B39B91 /* 3.jpg in Resources */,
@@ -548,7 +596,10 @@
 				9408794022E887DC00B39B91 /* LandingViewController.swift in Sources */,
 				9408796B22E9B21500B39B91 /* CellInterface.swift in Sources */,
 				94D1F76722F19CDB009FC676 /* LoginViewController.swift in Sources */,
+				940434012301722700C9D4A7 /* DeliverHomeViewController.swift in Sources */,
 				9469B15C22EEEDD600A0756D /* ProductDetailTableViewCell.swift in Sources */,
+				9404340F2301791A00C9D4A7 /* DeliverParser.swift in Sources */,
+				94043406230173AC00C9D4A7 /* SettingHomeViewController.swift in Sources */,
 				9408797022E9B27B00B39B91 /* RequestToken.swift in Sources */,
 				9408796022E99D4000B39B91 /* Config.swift in Sources */,
 				94D1F76B22F19D09009FC676 /* RegisterViewController.swift in Sources */,
@@ -561,6 +612,7 @@
 				9469B15F22EF04C300A0756D /* ProductEditViewController.swift in Sources */,
 				9469B15422EED96500A0756D /* ProductDetailViewController.swift in Sources */,
 				9462A32922FABD2800C3D5E4 /* ErrorMessage.swift in Sources */,
+				9404340C230177EB00C9D4A7 /* DeliverHomeTableViewCell.swift in Sources */,
 				9462A31922F8100E00C3D5E4 /* Activity.swift in Sources */,
 				9408796922E9B1C700B39B91 /* ProductCollectionViewCell.swift in Sources */,
 				9408797222E9B27B00B39B91 /* UIColor+.swift in Sources */,

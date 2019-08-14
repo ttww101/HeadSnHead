@@ -49,8 +49,15 @@ class BaseDropMenuViewController: BaseViewController {
             
             UIApplication.shared.delegate?.window??.rootViewController = nav
         }
+        menuViewController.tappedDeliverClosure = {
+            let storyboard = UIStoryboard(name: Config.Storyboard.deliver, bundle: nil)
+            guard let nav = storyboard.instantiateViewController(withIdentifier: Config.Controller.Deliver.nav) as? UINavigationController else { return }
+            UIApplication.shared.delegate?.window??.rootViewController = nav
+        }
         menuViewController.tappedSettingClosure = {
-            
+            let storyboard = UIStoryboard(name: Config.Storyboard.setting, bundle: nil)
+            guard let nav = storyboard.instantiateViewController(withIdentifier: Config.Controller.Setting.nav) as? UINavigationController else { return }
+            UIApplication.shared.delegate?.window??.rootViewController = nav
         }
         
         menuViewController.tappedLogOutClosure = {

@@ -8,18 +8,22 @@
 
 import UIKit
 import GuillotineMenu
+import StoreKit
 
 class MenuViewController: UIViewController, GuillotineMenu {
     
     @IBOutlet var menuFirstButton: UIButton!
     @IBOutlet var menuSecondButton: UIButton!
     @IBOutlet var menuThirdButton: UIButton!
+    @IBOutlet var menuFourthButton: UIButton!
+    @IBOutlet var menuFifthButton: UIButton!
     
     var dismissButton: UIButton?
     var titleLabel: UILabel?
     open var tappedLogOutClosure: (() -> ())? = nil
     open var tappedProductClosure: (() -> ())? = nil
     open var tappedActivityClosure: (() -> ())? = nil
+    open var tappedDeliverClosure: (() -> ())? = nil
     open var tappedSettingClosure: (() -> ())? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +53,8 @@ class MenuViewController: UIViewController, GuillotineMenu {
         self.menuFirstButton.setTitle(Config.Menu.names[0], for: .normal)
         self.menuSecondButton.setTitle(Config.Menu.names[1], for: .normal)
         self.menuThirdButton.setTitle(Config.Menu.names[2], for: .normal)
+        self.menuFourthButton.setTitle(Config.Menu.names[3], for: .normal)
+        self.menuFifthButton.setTitle(Config.Menu.names[4], for: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,7 +78,6 @@ class MenuViewController: UIViewController, GuillotineMenu {
     }
     
     @IBAction func menuButtonTapped(_ sender: UIButton) {
-        print(sender.tag)
         if sender.tag == 0 {
             if let closure = tappedProductClosure {
                 closure()
@@ -82,10 +87,20 @@ class MenuViewController: UIViewController, GuillotineMenu {
                 closure()
             }
         } else if sender.tag == 2 {
+            if let closure = tappedDeliverClosure {
+                closure()
+            }
+        } else if sender.tag == 3 {
             if let closure = tappedSettingClosure {
                 closure()
             }
+        } else if sender.tag == 4 {
+            if #available(iOS 10.3, *) {
+                SKStoreReviewController.requestReview()
+            }
+            return
         }
+        
         presentingViewController!.dismiss(animated: true, completion: nil)
     }
     

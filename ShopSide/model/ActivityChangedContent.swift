@@ -24,7 +24,7 @@ class ActivityChangedContent {
         str.append(isName ? "name: \(product.name)\n" : "")
         str.append(isCount ? "count: \(product.availableCount) \n" : "")
         str.append(isColor ? "color: \(product.color)\n" : "")
-        str.append(isPrice ? "price: \(product.price)" : "")
+        str.append(isPrice ? "price: \(product.price)\n" : "")
         str.append(isPhoto ? "photo\n" : "")
         str.append(isDescription ? "description: \(product.description)" : "")
         return str

@@ -31,14 +31,14 @@ class ProductDetailViewController: BaseViewController, UITableViewDelegate, UITa
         tableView.register(UINib(nibName: Config.TableViewCell.Product.detail, bundle: nil), forCellReuseIdentifier: Config.TableViewCell.Product.detail)
         tableView.tableFooterView = UIView()
         
-        let btn1 = UIButton()
-        btn1.setImage(UIImage(named: "ic_editinfo"), for: .normal)
-        btn1.imageView?.contentMode = .scaleAspectFit
-        btn1.imageEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: -20)
-        btn1.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
-        btn1.addTarget(self, action: #selector(editButtonDidTouchUpInside), for: .touchUpInside)
+        let rightNavButton = UIButton()
+        rightNavButton.setImage(UIImage(named: "ic_editinfo"), for: .normal)
+        rightNavButton.imageView?.contentMode = .scaleAspectFit
+        rightNavButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: -20)
+        rightNavButton.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+        rightNavButton.addTarget(self, action: #selector(editButtonDidTouchUpInside), for: .touchUpInside)
         let item1 = UIBarButtonItem()
-        item1.customView = btn1
+        item1.customView = rightNavButton
         self.navigationItem.rightBarButtonItem  = item1
     }
     

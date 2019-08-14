@@ -114,9 +114,9 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwG-XH-uxL">
-                                <rect key="frame" x="20" y="504" width="140" height="44"/>
+                                <rect key="frame" x="78" y="479.5" width="164" height="32"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
-                                <state key="normal" title="Forget?">
+                                <state key="normal" title="Forget Password?">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -185,7 +185,7 @@
                                     <action selector="login:" destination="32T-Dw-RHP" eventType="touchUpInside" id="Ewz-AX-raZ"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9L-70-wfC">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9L-70-wfC">
                                 <rect key="frame" x="160" y="504" width="140" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="yy5-Of-4TW"/>
@@ -206,19 +206,17 @@
                             <constraint firstItem="O3I-7G-dMk" firstAttribute="centerY" secondItem="15V-JX-tWo" secondAttribute="centerY" constant="-120" id="3Ey-3u-fld"/>
                             <constraint firstItem="O3I-7G-dMk" firstAttribute="centerX" secondItem="15V-JX-tWo" secondAttribute="centerX" id="3y2-fD-gUk"/>
                             <constraint firstItem="15V-JX-tWo" firstAttribute="trailing" secondItem="i9L-70-wfC" secondAttribute="trailing" constant="20" id="5bJ-d7-i6P"/>
-                            <constraint firstItem="15V-JX-tWo" firstAttribute="centerX" secondItem="WwG-XH-uxL" secondAttribute="trailing" id="6rx-KD-dHf"/>
                             <constraint firstItem="i9L-70-wfC" firstAttribute="leading" secondItem="15V-JX-tWo" secondAttribute="centerX" id="8di-hM-ZxX"/>
                             <constraint firstItem="e7I-KN-ELN" firstAttribute="centerX" secondItem="iQL-V9-lcz" secondAttribute="centerX" id="8z0-HY-5Zt"/>
                             <constraint firstItem="iQL-V9-lcz" firstAttribute="height" secondItem="nue-O5-1OW" secondAttribute="height" id="Acy-6b-WAS"/>
                             <constraint firstItem="O3I-7G-dMk" firstAttribute="width" secondItem="8pj-1c-sAY" secondAttribute="width" multiplier="1:2" id="Aqg-LS-gLU"/>
+                            <constraint firstItem="WwG-XH-uxL" firstAttribute="top" secondItem="e7I-KN-ELN" secondAttribute="bottom" constant="30" id="Gjn-Xf-RXr"/>
                             <constraint firstItem="15V-JX-tWo" firstAttribute="bottom" secondItem="i9L-70-wfC" secondAttribute="bottom" constant="20" id="Opl-Jh-Fhu"/>
                             <constraint firstItem="nue-O5-1OW" firstAttribute="centerX" secondItem="O3I-7G-dMk" secondAttribute="centerX" id="QqS-2c-jhm"/>
-                            <constraint firstItem="WwG-XH-uxL" firstAttribute="height" secondItem="i9L-70-wfC" secondAttribute="height" id="gDX-pc-35e"/>
+                            <constraint firstItem="WwG-XH-uxL" firstAttribute="centerX" secondItem="e7I-KN-ELN" secondAttribute="centerX" id="VDn-Ye-LKC"/>
                             <constraint firstItem="e7I-KN-ELN" firstAttribute="width" secondItem="iQL-V9-lcz" secondAttribute="width" multiplier="1:2" id="gm8-XB-qui"/>
                             <constraint firstItem="e7I-KN-ELN" firstAttribute="top" secondItem="iQL-V9-lcz" secondAttribute="bottom" constant="32" id="p4F-yD-d34"/>
-                            <constraint firstItem="15V-JX-tWo" firstAttribute="bottom" secondItem="WwG-XH-uxL" secondAttribute="bottom" constant="20" id="pco-uM-kE5"/>
                             <constraint firstItem="iQL-V9-lcz" firstAttribute="width" secondItem="nue-O5-1OW" secondAttribute="width" id="sMg-Oc-PYA"/>
-                            <constraint firstItem="WwG-XH-uxL" firstAttribute="leading" secondItem="15V-JX-tWo" secondAttribute="leading" constant="20" id="vdb-fi-hDL"/>
                             <constraint firstItem="iQL-V9-lcz" firstAttribute="centerX" secondItem="nue-O5-1OW" secondAttribute="centerX" id="vgK-5J-GOc"/>
                             <constraint firstItem="nue-O5-1OW" firstAttribute="width" secondItem="8pj-1c-sAY" secondAttribute="width" multiplier="8:9" id="zJG-Td-7mu"/>
                         </constraints>

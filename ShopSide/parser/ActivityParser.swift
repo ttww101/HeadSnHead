@@ -27,12 +27,6 @@ class ActivityParser {
         
         let activity = Activity(type: ActivityType(rawValue: type) ?? ActivityType.update, owner: owner, ownerPhotoURL: ownerPhotoURL, activityID: activityID, title: title, content: content, productID: productID, productPhotoURL: productPhotoURL, time: time)
         
-//        FirebaseManager.shared.getImage(from: photoURL) { (image, error) in
-//            DispatchQueue.main.async {
-//                product.avatar = image
-//            }
-//        }
-        
         return activity
     }
 }

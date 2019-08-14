@@ -62,6 +62,14 @@ extension UIColor {
         return UIColor.hexColor(with: "328530")
     }
     
+    static func darkGold() -> UIColor {
+        return UIColor.hexColor(with: "C5C018")
+    }
+    
+    static func gold() -> UIColor {
+        return UIColor.hexColor(with: "EFE91D")
+    }
+    
     static func youngYellow() -> UIColor {
         return UIColor.hexColor(with: "ffff5e")
     }

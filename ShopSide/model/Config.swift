@@ -13,15 +13,18 @@ struct Config {
     static let AppAssociateName = "Shop_Side"
     
     struct Menu {
-        static let names = ["Product", "Activity", "Setting"]
+        static let names = ["Product", "Activity", "Deliver", "Setting", "Rate us"]
     }
     
     struct Storyboard {
         static let main = "Main"
+        static let menu = "Menu"
         static let product = "Product"
         static let login = "Login"
         static let activity = "Activity"
         static let popup = "Popup"
+        static let deliver = "Deliver"
+        static let setting = "Setting"
     }
     
     struct Controller {
@@ -45,6 +48,14 @@ struct Config {
             static let nav = "ActivityNavigationController"
         }
         
+        struct Deliver {
+            static let nav = "DeliverNavigationController"
+        }
+        
+        struct Setting {
+            static let nav = "SettingNavigationController"
+        }
+        
         struct Popup {
             static let deliver = "DeliverPopViewController"
         }
@@ -59,6 +70,10 @@ struct Config {
         
         struct Activity {
             static let home = "ActivityHomeTableViewCell"
+        }
+        
+        struct Deliver {
+            static let home = "DeliverHomeTableViewCell"
         }
     }
     
@@ -103,6 +118,7 @@ struct Config {
                 static let productID = "ProductID"
                 static let address = "Address"
                 static let orderCount = "OrderCount"
+                static let createTime = "CreateTime"
             }
         }
         
