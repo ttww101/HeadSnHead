@@ -203,6 +203,15 @@ class ProfileViewController: BaseViewController {
         ref.updateChildValues(userUpdatedInfo) { (error, _) in
 
             self.loadingIndicator.stop()
+            
+            guard let uid = Auth.auth().currentUser?.uid else { return }
+            FirebaseManager.shared.getUserInfo(currentUserUID: uid, completion: { (user, error) in
+                if (error != nil) { return }
+                guard
+                    let user = user
+                    else { return }
+                CurrentUser.user = user
+            })
 
             if error == nil {
                 self.navigationController?.popViewController(animated: true)
