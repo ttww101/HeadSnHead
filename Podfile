@@ -32,5 +32,6 @@ target 'ShopSide' do
   pod 'YPImagePicker'
   pod 'LGButton'
   pod 'GMStepper'
+  pod 'SwipeCellKit'
   
 end

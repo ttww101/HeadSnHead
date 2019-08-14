@@ -137,7 +137,7 @@
 There is an approximate 1.5-size difference between men's and women's sizing.
 For example, a women’s size 8.5 is roughly equivalent to a men’s size 7.</string>
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes"/>
                         <connections>
                             <outlet property="delegate" destination="KGk-i7-Jjw" id="9V8-Ni-YfF"/>
                         </connections>

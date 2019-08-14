@@ -58,6 +58,7 @@
 		9469B16422F032CE00A0756D /* ProductEditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9469B16222F032CE00A0756D /* ProductEditTableViewCell.swift */; };
 		9469B16522F032CE00A0756D /* ProductEditTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9469B16322F032CE00A0756D /* ProductEditTableViewCell.xib */; };
 		9469B16722F03FD700A0756D /* ShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9469B16622F03FD700A0756D /* ShadowImageView.swift */; };
+		94A861DB2303FC05002C60E2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A861DA2303FC05002C60E2 /* ProfileViewController.swift */; };
 		94D1F76322F18C80009FC676 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94D1F76222F18C7F009FC676 /* GoogleService-Info.plist */; };
 		94D1F76522F19CCA009FC676 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D1F76422F19CC9009FC676 /* Login.storyboard */; };
 		94D1F76722F19CDB009FC676 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D1F76622F19CDB009FC676 /* LoginViewController.swift */; };
@@ -126,6 +127,7 @@
 		9469B16222F032CE00A0756D /* ProductEditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEditTableViewCell.swift; sourceTree = "<group>"; };
 		9469B16322F032CE00A0756D /* ProductEditTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductEditTableViewCell.xib; sourceTree = "<group>"; };
 		9469B16622F03FD700A0756D /* ShadowImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowImageView.swift; sourceTree = "<group>"; };
+		94A861DA2303FC05002C60E2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		94D1F76222F18C7F009FC676 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		94D1F76422F19CC9009FC676 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		94D1F76622F19CDB009FC676 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			children = (
 				94043405230173AC00C9D4A7 /* SettingHomeViewController.swift */,
 				940434032301737B00C9D4A7 /* Setting.storyboard */,
+				94A861D92303FBEC002C60E2 /* profile */,
 			);
 			path = setting;
 			sourceTree = "<group>";
@@ -248,10 +251,6 @@
 			children = (
 				94D1F76C22F19D11009FC676 /* login */,
 				9408798222E9E5FB00B39B91 /* product */,
-				9408795A22E9895500B39B91 /* ProductHomeViewController.swift */,
-				9469B15222EED96500A0756D /* ProductDetailViewController.swift */,
-				9469B15E22EF04C300A0756D /* ProductEditViewController.swift */,
-				9408797522E9C99F00B39B91 /* Product.storyboard */,
 				9462A31A22F82A2300C3D5E4 /* activity */,
 				940433FD230171EE00C9D4A7 /* deliver */,
 				940434022301730800C9D4A7 /* setting */,
@@ -332,6 +331,10 @@
 		9408798222E9E5FB00B39B91 /* product */ = {
 			isa = PBXGroup;
 			children = (
+				9408795A22E9895500B39B91 /* ProductHomeViewController.swift */,
+				9469B15222EED96500A0756D /* ProductDetailViewController.swift */,
+				9469B15E22EF04C300A0756D /* ProductEditViewController.swift */,
+				9408797522E9C99F00B39B91 /* Product.storyboard */,
 			);
 			path = product;
 			sourceTree = "<group>";
@@ -365,6 +368,14 @@
 				9469B16322F032CE00A0756D /* ProductEditTableViewCell.xib */,
 			);
 			path = Product;
+			sourceTree = "<group>";
+		};
+		94A861D92303FBEC002C60E2 /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				94A861DA2303FC05002C60E2 /* ProfileViewController.swift */,
+			);
+			path = profile;
 			sourceTree = "<group>";
 		};
 		94D1F76C22F19D11009FC676 /* login */ = {
@@ -516,6 +527,7 @@
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SteviaLayout/Stevia.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
 				"${BUILT_PRODUCTS_DIR}/YPImagePicker/YPImagePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -540,6 +552,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stevia.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YPImagePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -612,6 +625,7 @@
 				9469B15F22EF04C300A0756D /* ProductEditViewController.swift in Sources */,
 				9469B15422EED96500A0756D /* ProductDetailViewController.swift in Sources */,
 				9462A32922FABD2800C3D5E4 /* ErrorMessage.swift in Sources */,
+				94A861DB2303FC05002C60E2 /* ProfileViewController.swift in Sources */,
 				9404340C230177EB00C9D4A7 /* DeliverHomeTableViewCell.swift in Sources */,
 				9462A31922F8100E00C3D5E4 /* Activity.swift in Sources */,
 				9408796922E9B1C700B39B91 /* ProductCollectionViewCell.swift in Sources */,
@@ -770,7 +784,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.FCCutomer.demo.ShopSide;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ap.snhead;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
@@ -791,7 +805,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.FCCutomer.demo.ShopSide;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ap.snhead;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;

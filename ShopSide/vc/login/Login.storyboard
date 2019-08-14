@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O3I-7G-dMk">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_appicon" translatesAutoresizingMaskIntoConstraints="NO" id="O3I-7G-dMk">
                                 <rect key="frame" x="80" y="94" width="160" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="O3I-7G-dMk" secondAttribute="height" multiplier="1:1" id="FcV-WQ-dGE"/>
@@ -560,5 +560,6 @@
     </scenes>
     <resources>
         <image name="ic_addcloud" width="64" height="64"/>
+        <image name="ic_appicon" width="256" height="256"/>
     </resources>
 </document>

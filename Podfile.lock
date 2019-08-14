@@ -97,6 +97,7 @@ PODS:
   - SkyFloatingLabelTextField (3.7.0)
   - SnapKit (5.0.0)
   - SteviaLayout (4.4.4)
+  - SwipeCellKit (2.6.0)
   - YPImagePicker (4.0.0):
     - PryntTrimmerView (~> 3.0.0)
     - SteviaLayout (~> 4.4.1)
@@ -119,6 +120,7 @@ DEPENDENCIES:
   - PopupDialog
   - SkyFloatingLabelTextField
   - SnapKit
+  - SwipeCellKit
   - YPImagePicker
 
 SPEC REPOS:
@@ -153,6 +155,7 @@ SPEC REPOS:
     - SkyFloatingLabelTextField
     - SnapKit
     - SteviaLayout
+    - SwipeCellKit
     - YPImagePicker
 
 SPEC CHECKSUMS:
@@ -186,8 +189,9 @@ SPEC CHECKSUMS:
   SkyFloatingLabelTextField: 4b46db0ab1ccde0919cded29c656e6b4805eda04
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
   SteviaLayout: 523469269059f2c6da02820bb2ff28a5fe0780aa
+  SwipeCellKit: 935ca28c187ec6e1ffb2b578cf8ddca842bfdcbb
   YPImagePicker: 8039f89ad79281545fa868486f32d9bf5d65ede1
 
-PODFILE CHECKSUM: 6d2b7a4f57e70b13875728ff78a4e65e09f14853
+PODFILE CHECKSUM: 2cc4b9d3dba8c320f406800117d57ea3052dbec3
 
 COCOAPODS: 1.5.3

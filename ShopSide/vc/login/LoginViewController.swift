@@ -104,7 +104,7 @@ class LoginViewController: BaseViewController {
 
         if emailTexfield.text == "" {
 
-            self.showAlert(myMsg: "請先填寫您所註冊的Email 在 Email 欄位\n填完後點選 Forget?\n我們將會寄送一封重設密碼對郵件給您")
+            self.showAlert(myMsg: "Please type the email. We'll send an reset email to you.")
 
         } else {
 
@@ -113,9 +113,9 @@ class LoginViewController: BaseViewController {
             ref.sendPasswordReset(withEmail: emailTexfield.text!, completion: { (error) in
 
                 if error != nil {
-                    self.showAlert(myMsg: "此 Email 尚未註冊\n請確認您所填寫之 Email 是否正確")
+                    self.showAlert(myMsg: "Please verify email.")
                 } else {
-                    self.showAlert(myMsg: "我們已寄送一封重設密碼郵件給您")
+                    self.showAlert(myMsg: "We've sent an reset password email to you.")
                 }
             })
         }
@@ -123,7 +123,7 @@ class LoginViewController: BaseViewController {
 
     func showAlert(myMsg: String?) {
 
-        let alertController = UIAlertController(title: "通知",
+        let alertController = UIAlertController(title: "Forget?",
                                                 message: myMsg,
                                                 preferredStyle: .alert)
 

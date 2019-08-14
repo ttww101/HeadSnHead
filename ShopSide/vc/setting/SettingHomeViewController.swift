@@ -14,7 +14,7 @@ class SettingHomeViewController: BaseDropMenuViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var switchControl: UISwitch = UISwitch()
-    var titles = ["Foreground notification", "Go iPhone Settings"]
+    var titles = ["Profile", "Go iPhone Settings", "Foreground Notification"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,10 +36,13 @@ extension SettingHomeViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if (indexPath.row == 1) {
+        if indexPath.row == 1 {
             let urlstr = UIApplication.openSettingsURLString
             guard let url = URL(string: urlstr) else { return }
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else if indexPath.row == 0 {
+              guard let vc = self.createViewControllerFromStoryboard(name: Config.Storyboard.setting, identifier: Config.Controller.Setting.profile) as? ProfileViewController else { return }
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
@@ -52,7 +55,7 @@ extension SettingHomeViewController: UITableViewDelegate, UITableViewDataSource 
         var cell = tableView.dequeueReusableCell(withIdentifier:identifier)
         if (cell == nil) {
             cell = UITableViewCell(style: .default, reuseIdentifier: identifier)
-            if indexPath.row == 0 {
+            if indexPath.row == 2 {
                 cell!.contentView.addSubview(self.switchControl)
                 cell!.selectionStyle = .none
                 self.switchControl.snp.makeConstraints { (make) in
@@ -60,7 +63,7 @@ extension SettingHomeViewController: UITableViewDelegate, UITableViewDataSource 
                     make.bottom.equalTo(cell!.contentView).inset(8)
                     make.trailing.equalTo(cell!.contentView).inset(16)
                 }
-            } else if indexPath.row == 1 {
+            } else if indexPath.row == 0 || indexPath.row == 1 {
                 cell?.accessoryType = .disclosureIndicator
             }
         }

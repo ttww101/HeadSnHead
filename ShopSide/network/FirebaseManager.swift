@@ -97,6 +97,8 @@ extension FirebaseManager {
             
             self.loadingIndicator.stop()
             
+            ref.removeAllObservers()
+            
             if snapshot.exists() {
                 
                 guard

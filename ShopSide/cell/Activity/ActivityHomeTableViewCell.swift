@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-class ActivityHomeTableViewCell: UITableViewCell {
+class ActivityHomeTableViewCell: SwipeTableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var titleSeperatorView: UIView!

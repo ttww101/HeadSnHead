@@ -54,6 +54,7 @@ struct Config {
         
         struct Setting {
             static let nav = "SettingNavigationController"
+            static let profile = "ProfileViewController"
         }
         
         struct Popup {

@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import BTNavigationDropdownMenu
+import SwipeCellKit
 
 class ActivityHomeViewController: BaseDropMenuViewController {
 
@@ -23,9 +24,13 @@ class ActivityHomeViewController: BaseDropMenuViewController {
         tableView.register(UINib(nibName: Config.TableViewCell.Activity.home, bundle: nil), forCellReuseIdentifier: Config.TableViewCell.Activity.home)
         tableView.tableFooterView = UIView()
         
-        self.getActivities()
         self.setNavigationDropdownMenu()
         self.navigationItem.rightBarButtonItem = self.createNavigationBarButton(selector: #selector(refresh), image: UIImage(named: "ic_refresh"))
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.refresh()
     }
     
     @objc func refresh() {
@@ -33,13 +38,41 @@ class ActivityHomeViewController: BaseDropMenuViewController {
     }
 }
 
-extension ActivityHomeViewController: UITableViewDelegate, UITableViewDataSource {
+extension ActivityHomeViewController: UITableViewDelegate, UITableViewDataSource, SwipeTableViewCellDelegate {
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        guard orientation == .right else { return nil }
+        
+        let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
+            
+            self.showActivities.remove(at: indexPath.row)
+            action.fulfill(with: .delete)
+            
+            let ref = Database.database().reference().child(Config.Firebase.Activity.nodeName).child(self.activities[indexPath.row].activityID)
+            
+            FirebaseManager.shared.deleteData(ref: ref) {
+                self.refresh()
+            }
+        }
+        
+        deleteAction.image = UIImage(named: "ic_delete")
+        
+        return [deleteAction]
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
+        var options = SwipeOptions()
+        options.expansionStyle = .destructive
+        options.transitionStyle = .border
+        return options
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let activity = self.showActivities[indexPath.row]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Config.TableViewCell.Activity.home, for: indexPath) as? ActivityHomeTableViewCell else {
             return UITableViewCell()
         }
+        cell.delegate = self
         cell.configCell(with: activity)
         return cell
     }

@@ -63,5 +63,146 @@
             </objects>
             <point key="canvasLocation" x="-49.275362318840585" y="90.401785714285708"/>
         </scene>
+        <!--Edit Profile-->
+        <scene sceneID="QFa-bl-vaA">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" title="Edit Profile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uuO-bq-wmJ" customClass="ProfileViewController" customModule="ShopSide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9VM-LP-ff5"/>
+                        <viewControllerLayoutGuide type="bottom" id="nn7-8E-W4U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t36-Dr-Hb0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_profile" translatesAutoresizingMaskIntoConstraints="NO" id="gSm-dg-mqN">
+                                <rect key="frame" x="89.5" y="230.5" width="235" height="235"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gSm-dg-mqN" secondAttribute="height" multiplier="1:1" id="bw6-0F-rzE"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Fe-sy-8Gr" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="41.5" y="495.5" width="331" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="doB-yd-pU4"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Name"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter Name"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AKd-cE-NgZ" customClass="LGButton" customModule="LGButton">
+                                <rect key="frame" x="57.5" y="785.5" width="133.5" height="44.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AKd-cE-NgZ" secondAttribute="height" multiplier="6:2" id="YK3-ew-gSh"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" red="0.51252788940000005" green="0.51618228290000001" blue="0.5271454632" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fullyRoundedCorners" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleString" value="Cancel"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleFontName" value="Menlo-Bold"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleFontSize">
+                                        <real key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cancelEdit:" destination="uuO-bq-wmJ" eventType="touchUpInside" id="rKH-WC-y5s"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4kK-9X-qA1" customClass="LGButton" customModule="LGButton">
+                                <rect key="frame" x="223" y="785.5" width="133.5" height="44.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4kK-9X-qA1" secondAttribute="height" multiplier="6:2" id="krd-3S-sZB"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" red="0.51252788940000005" green="0.51618228290000001" blue="0.5271454632" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fullyRoundedCorners" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleString" value="Save"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleFontName" value="Menlo-Bold"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleFontSize">
+                                        <real key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveProfileInfo:" destination="uuO-bq-wmJ" eventType="touchUpInside" id="hiZ-kc-Vm7"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4kK-9X-qA1" firstAttribute="trailing" secondItem="8Fe-sy-8Gr" secondAttribute="trailing" constant="-16" id="1SB-mk-jDY"/>
+                            <constraint firstItem="8Fe-sy-8Gr" firstAttribute="centerX" secondItem="gSm-dg-mqN" secondAttribute="centerX" id="B3c-GU-ZKB"/>
+                            <constraint firstItem="8Fe-sy-8Gr" firstAttribute="width" secondItem="t36-Dr-Hb0" secondAttribute="width" multiplier="8:10" id="LNo-8m-kt6"/>
+                            <constraint firstItem="gSm-dg-mqN" firstAttribute="centerX" secondItem="t36-Dr-Hb0" secondAttribute="centerX" id="PtX-g3-9Ng"/>
+                            <constraint firstItem="4kK-9X-qA1" firstAttribute="leading" secondItem="t36-Dr-Hb0" secondAttribute="centerX" constant="16" id="U8k-VY-Cwe"/>
+                            <constraint firstAttribute="centerX" secondItem="AKd-cE-NgZ" secondAttribute="trailing" constant="16" id="YA2-vG-DQ0"/>
+                            <constraint firstItem="4kK-9X-qA1" firstAttribute="centerY" secondItem="AKd-cE-NgZ" secondAttribute="centerY" id="bBt-3S-zSd"/>
+                            <constraint firstItem="gSm-dg-mqN" firstAttribute="centerY" secondItem="t36-Dr-Hb0" secondAttribute="centerY" constant="-100" id="bYP-ff-0ih"/>
+                            <constraint firstItem="nn7-8E-W4U" firstAttribute="top" secondItem="AKd-cE-NgZ" secondAttribute="bottom" constant="32" id="nnM-IP-4uT"/>
+                            <constraint firstItem="8Fe-sy-8Gr" firstAttribute="top" secondItem="gSm-dg-mqN" secondAttribute="bottom" constant="30" id="ojY-ER-FwF"/>
+                            <constraint firstItem="gSm-dg-mqN" firstAttribute="width" secondItem="t36-Dr-Hb0" secondAttribute="height" multiplier="175:667" id="rdf-br-Zuz"/>
+                            <constraint firstItem="AKd-cE-NgZ" firstAttribute="width" secondItem="4kK-9X-qA1" secondAttribute="width" id="y69-In-Y8Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5PY-ub-6Fw"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="8Fe-sy-8Gr" id="FV3-z0-nvn"/>
+                        <outlet property="userImageView" destination="gSm-dg-mqN" id="Z8a-e1-X7P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a9M-ya-WFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1584" y="90"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="ic_profile" width="17" height="24"/>
+    </resources>
 </document>
