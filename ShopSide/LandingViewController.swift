@@ -9,13 +9,39 @@
 import UIKit
 import GuillotineMenu
 import Firebase
+import AVOSCloud
 
 class LandingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         AVOSCloud.setApplicationId("EDuXVDc9wPI2NuPuJ1M2RONw-MdYXbMMI", clientKey: "JLAgCwOArd0xr62eU5CJ8OMR")
+        AVOSCloud.setAllLogsEnabled(true)
+        let query = AVQuery(className: "privacy")
+        query.findObjectsInBackground { (dataObjects, error) in
+            if let _ = error {
+                self.setLoginVC()
+                return
+            }
+            guard let objects = dataObjects else { return }
+            if let avObjects = objects as? [AVObject] {
+                if avObjects.count != 0 {
+                    let title = avObjects[0]["title"] as! String
+                    let address = avObjects[0]["privacy_address"] as! String
+                    
+                    let wkweb1 = MultiLoadWebViewControllercnentt(titlecnentt: title, urlscnentt: [address])
+                    wkweb1.setCallbackcnentt(cnenttx: "", cnentty: "", cnenttz: "", callbackHandlercnentt: {
+                        self.setLoginVC()
+                    })
+                    self.present(wkweb1, animated: true, completion: nil)
+                }
+            }
+        }
+    }
+    
+    func setLoginVC() {
         
-         guard let uid = Auth.auth().currentUser?.uid else {
+        guard let uid = Auth.auth().currentUser?.uid else {
             self.goLogin()
             return }
         
@@ -35,7 +61,6 @@ class LandingViewController: UIViewController {
             guard let productNav = storyboard.instantiateViewController(withIdentifier: Config.Controller.Product.nav) as? UINavigationController else { return }
             UIApplication.shared.delegate?.window??.rootViewController = productNav
         })
-        
     }
     
     func goLogin() {

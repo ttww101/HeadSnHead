@@ -33,5 +33,6 @@ target 'ShopSide' do
   pod 'LGButton'
   pod 'GMStepper'
   pod 'SwipeCellKit'
+  pod 'AVOSCloud'
   
 end

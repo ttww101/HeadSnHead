@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -67,6 +67,7 @@
 		94DA6FBD22F1CED6000B0A6A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DA6FBC22F1CED6000B0A6A /* User.swift */; };
 		94DA6FC022F31460000B0A6A /* ProductParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DA6FBF22F31460000B0A6A /* ProductParser.swift */; };
 		94DA6FC322F31700000B0A6A /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DA6FC222F31700000B0A6A /* FirebaseManager.swift */; };
+		F4987818234B61CB0014DF68 /* WebTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4987817234B61CB0014DF68 /* WebTools.swift */; };
 		F68E321CDA5FE4174F4E6542 /* Pods_ShopSide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E444F2E5143F0363D1DFAAB8 /* Pods_ShopSide.framework */; };
 /* End PBXBuildFile section */
 
@@ -138,6 +139,7 @@
 		94DA6FC222F31700000B0A6A /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		E444F2E5143F0363D1DFAAB8 /* Pods_ShopSide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShopSide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4987816234B372B0014DF68 /* ShopSide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShopSide.entitlements; sourceTree = "<group>"; };
+		F4987817234B61CB0014DF68 /* WebTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebTools.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,6 +387,7 @@
 			children = (
 				94D1F76622F19CDB009FC676 /* LoginViewController.swift */,
 				94D1F76A22F19D08009FC676 /* RegisterViewController.swift */,
+				F4987817234B61CB0014DF68 /* WebTools.swift */,
 				94D1F76422F19CC9009FC676 /* Login.storyboard */,
 			);
 			path = login;
@@ -515,58 +518,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ShopSide/Pods-ShopSide-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BTNavigationDropdownMenu/BTNavigationDropdownMenu.framework",
-				"${BUILT_PRODUCTS_DIR}/DisplaySwitcher/DisplaySwitcher.framework",
-				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
-				"${BUILT_PRODUCTS_DIR}/GMStepper/GMStepper.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/GuillotineMenu/GuillotineMenu.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/LGButton/LGButton.framework",
-				"${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework",
-				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
-				"${BUILT_PRODUCTS_DIR}/PryntTrimmerView/PryntTrimmerView.framework",
-				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SteviaLayout/Stevia.framework",
-				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
-				"${BUILT_PRODUCTS_DIR}/YPImagePicker/YPImagePicker.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ShopSide/Pods-ShopSide-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BTNavigationDropdownMenu.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DisplaySwitcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GMStepper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GuillotineMenu.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGButton.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTMorphingLabel.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PryntTrimmerView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stevia.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YPImagePicker.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ShopSide/Pods-ShopSide-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShopSide/Pods-ShopSide-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShopSide/Pods-ShopSide-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		931DF592D787492BE89CF343 /* [CP] Check Pods Manifest.lock */ = {
@@ -606,6 +566,7 @@
 				9462A32022F832EE00C3D5E4 /* ActivityHomeTableViewCell.swift in Sources */,
 				94DA6FBD22F1CED6000B0A6A /* User.swift in Sources */,
 				9408796322E9B0C100B39B91 /* Product.swift in Sources */,
+				F4987818234B61CB0014DF68 /* WebTools.swift in Sources */,
 				94DA6FC022F31460000B0A6A /* ProductParser.swift in Sources */,
 				9469B16122EF1C1E00A0756D /* BaseViewController.swift in Sources */,
 				9408795922E8986700B39B91 /* BaseDropMenuViewController.swift in Sources */,
